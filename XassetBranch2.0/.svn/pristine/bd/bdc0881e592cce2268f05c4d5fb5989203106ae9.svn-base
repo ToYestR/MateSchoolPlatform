@@ -1,0 +1,78 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System;
+using UnityEngine.EventSystems;
+
+namespace FriendSystem
+{
+    /// <summary>
+    /// 头像选择窗口
+    /// </summary>
+    public class HeadSculptureWindow : MonoBehaviour
+    {
+        public static HeadSculptureWindow getInstance;
+        private Dictionary<int, Sprite> icons = new Dictionary<int, Sprite>();
+        private Action<Sprite, int> OnSelectIconAction;
+        [SerializeField] Transform iconsNode;
+        private void Awake()
+        {
+            getInstance = this;
+            for (int i = 0; i < iconsNode.childCount; i++)
+            {
+                int index = i;
+                Transform item = iconsNode.GetChild(index);
+                Sprite sprite = item.GetComponent<Image>().sprite;
+                EventTrigger trigger = null;
+                if (!item.TryGetComponent<EventTrigger>(out trigger))
+                {
+                    trigger = item.gameObject.AddComponent<EventTrigger>();
+                }
+                EventTrigger.Entry entry = new EventTrigger.Entry();
+                entry.eventID = EventTriggerType.PointerClick;
+                entry.callback.AddListener(arg0 =>
+                {
+                    OnSelectIcon(index);
+                });
+                trigger.triggers.Add(entry);
+                icons.Add(index, sprite);
+            }
+            ToggleWindow(false);
+        }
+
+        public void OpenHeadSculptureWindow(Action<Sprite, int> action)
+        {
+            OnSelectIconAction = action;
+            ToggleWindow(true);
+        }
+        public Sprite GetSprite(int id)
+        {
+            if (icons.ContainsKey(id))
+            {
+                return icons[id];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public Sprite GetSprite(string idStr)
+        {
+            int id = 0;
+            int.TryParse(idStr, out id);
+            return GetSprite(id);
+        }
+        private void ToggleWindow(bool toggle)
+        {
+            transform.GetChild(0).gameObject.SetActive(toggle);
+        }
+        private void OnSelectIcon(int index)
+        {
+            Debug.Log("选择头像：" + index);
+            OnSelectIconAction?.Invoke(GetSprite(index), index);
+            OnSelectIconAction = null;
+            ToggleWindow(false);
+        }
+    }
+}

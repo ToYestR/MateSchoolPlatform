@@ -1,0 +1,91 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace FriendSystem
+{
+    public class FriendSettingPage : MonoBehaviour
+    {
+        public ChatPage chatPage;
+
+        [SerializeField] Button back;
+        [SerializeField] Button openRemarkPanel;
+        [SerializeField] Button openGroupPanel;
+        [SerializeField] Button openLimitPanel;
+        [SerializeField] Button visitRoomBtn; // 拜访房间 按钮
+        [SerializeField] Button delBtn;
+
+        [SerializeField] Toggle joinBlackToggle;
+
+        [SerializeField] Text remarkTxT;
+        [SerializeField] Text groupTxT;
+
+        private void Start()
+        {
+            back.onClick.AddListener(Back);
+            openRemarkPanel.onClick.AddListener(OpenRemarkPanel);
+            openGroupPanel.onClick.AddListener(OpenGroupPanel);
+            openLimitPanel.onClick.AddListener(OpenLimitPanel);
+            visitRoomBtn.onClick.AddListener(OnVisitRoom);
+            delBtn.onClick.AddListener(OnDelFriend);
+            joinBlackToggle.onValueChanged.AddListener(OnBlackFriend);
+        }
+
+        private void OnVisitRoom() // 拜访 房间
+        {
+            Friend friend=chatPage.target;
+            Debug.Log("拜访房间:"+friend.friendUserId+":"+friend.id);
+        }
+
+        private void OnEnable()
+        {
+            joinBlackToggle.isOn = false;
+            remarkTxT.text = "";
+            groupTxT.text = "";
+            if (chatPage)
+            {
+                remarkTxT.text = chatPage.target.remark;
+                groupTxT.text = chatPage.target.tag?.name;
+            }
+        }
+        private void Back()                 // 回到之前页面
+        {
+            PageManager.getInstance.Back(nameof(ChatPage));
+        }
+        private void OpenRemarkPanel() // 打开备注窗口
+        {
+            PageManager.getInstance.Show(nameof(FriendSettingPage), nameof(RemarkPage));
+        }
+        private void OpenGroupPanel() // 打开分组窗口
+        {
+            PageManager.getInstance.Show(nameof(FriendSettingPage), nameof(GroupingPage));
+        }
+        private void OpenLimitPanel() // 打开房间限制窗口
+        {
+            PageManager.getInstance.Show(nameof(FriendSettingPage), nameof(FriendRoomLimitPage));
+        }
+
+        private void OnBlackFriend(bool arg)    // 拉黑好友
+        {
+            if(arg)
+            {
+                InfoHandle.BlackOther(chatPage.target.id, "Y", json =>
+                {
+                    GoodFriendManager.getInstance.friendList.Remove(chatPage.target.friendChatNo);
+                    Back();
+                });
+            }
+        }
+        private void OnDelFriend()              // 删除好友
+        {
+            InfoHandle.DeleteFr(chatPage.target.id, json =>
+            {
+                GoodFriendManager.getInstance.friendList.Remove(chatPage.target.friendChatNo);
+                Back();
+            });
+        }
+    }
+}

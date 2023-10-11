@@ -1,0 +1,351 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Linq;
+
+namespace FriendSystem
+{
+    public class GoodFriendManager : MonoBehaviour
+    {
+        public static GoodFriendManager getInstance;
+        [Range(1, 10)] public float requestTime = 2f;                              // 列表请求时间间隔
+        public ChatContentView chatWindow;                                                           // 聊天窗口
+        #region 属性
+        public Dictionary<string, Friend> friendList = new Dictionary<string, Friend>();    // 好友列表 (微聊号)
+        public Dictionary<string, Friend> blackList = new Dictionary<string, Friend>();     // 拉黑列表 （微聊号）
+        public Dictionary<string, Friend> beBlackList = new Dictionary<string, Friend>();   // 被拉黑列表（微聊号）  好友 拉黑我
+        public Dictionary<string, ApplyFriend> applyList = new Dictionary<string, ApplyFriend>();     // 申请列表（微聊号）
+        public List<MyTag> myTags = new List<MyTag>();                                      // 我的标签列表
+        #endregion
+        private void Awake()
+        {
+            getInstance = this;
+            Close();
+        }
+        private void Start()
+        {
+
+        }
+        private void OnEnable()
+        {
+            StartCoroutine(UpdateRequest());
+        }
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+        }
+        private IEnumerator UpdateRequest()
+        {
+            while (true)
+            {
+                GetAllFriendList();
+                GetApplayFriendList();
+                GetOnlineFriend();
+                OnTagInit();
+                yield return new WaitForSecondsRealtime(requestTime);
+                yield return null;
+            }
+        }
+        /// <summary>
+        /// 获取好友列表
+        /// </summary>
+        private void GetAllFriendList()
+        {
+            InfoHandle.GetFrList(json =>
+            {
+                Debug.Log(json);
+                JObject obj = (JObject)JsonConvert.DeserializeObject(json);
+                string msg = (string)obj["msg"];
+                int code = (int)obj["code"];
+                var dataJson = obj["data"].ToString();
+                if (code == 200)
+                {
+                    List<string> chatNos = new List<string>();
+                    List<Friend> friends = JsonConvert.DeserializeObject<List<Friend>>(dataJson);
+                    // 黑名单列表
+                    foreach (var bl in blackList)
+                    {
+                        if (!friends.Exists(f => f.friendChatNo == bl.Key))
+                        {
+                            chatNos.Add(bl.Key);
+                        }
+                    }
+                    foreach (var id in chatNos)
+                    {
+                        blackList.Remove(id);
+                    }
+                    chatNos.Clear();
+                    // 被拉黑黑名单列表
+                    foreach (var bl in beBlackList)
+                    {
+                        if (!friends.Exists(f => f.friendChatNo == bl.Key))
+                        {
+                            chatNos.Add(bl.Key);
+                        }
+                    }
+                    foreach (var id in chatNos)
+                    {
+                        beBlackList.Remove(id);
+                    }
+                    chatNos.Clear();
+                    // 好友列表
+                    foreach (var bl in friendList)
+                    {
+                        if (!friends.Exists(f => f.friendChatNo == bl.Key))
+                        {
+                            chatNos.Add(bl.Key);
+                        }
+                    }
+                    foreach (var id in chatNos)
+                    {
+                        friendList.Remove(id);
+                    }
+                    chatNos.Clear();
+
+                    // 更新数据
+                    foreach (var friend in friends)
+                    {
+                        if (friend.black == "Y")                            // 拉黑
+                        {
+                            if (blackList.ContainsKey(friend.friendChatNo))
+                            {
+
+                                blackList[friend.friendChatNo].CopyForValue(friend);
+                            }
+                            else
+                            {
+                                if (friendList.ContainsKey(friend.friendChatNo)) friendList.Remove(friend.friendChatNo);
+                                if (beBlackList.ContainsKey(friend.friendChatNo)) beBlackList.Remove(friend.friendChatNo);
+                                blackList.Add(friend.friendChatNo, friend);
+                            }
+                        }
+                        else if (friend.beBlack == "Y")                      // 被拉黑
+                        {
+                            if (beBlackList.ContainsKey(friend.friendChatNo))
+                            {
+                                beBlackList[friend.friendChatNo].CopyForValue(friend);
+                            }
+                            else
+                            {
+                                if (friendList.ContainsKey(friend.friendChatNo)) friendList.Remove(friend.friendChatNo);
+                                if (blackList.ContainsKey(friend.friendChatNo)) blackList.Remove(friend.friendChatNo);
+                                beBlackList.Add(friend.friendChatNo, friend);
+                            }
+                        }
+                        else                                                // 好友             
+                        {
+                            if (friendList.ContainsKey(friend.friendChatNo))
+                            {
+                                friendList[friend.friendChatNo].CopyForValue(friend);
+                            }
+                            else
+                            {
+                                if (beBlackList.ContainsKey(friend.friendChatNo)) beBlackList.Remove(friend.friendChatNo);
+                                if (blackList.ContainsKey(friend.friendChatNo)) blackList.Remove(friend.friendChatNo);
+                                friendList.Add(friend.friendChatNo, friend);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"获取好友列表失败：{msg}\n返回码{code}");
+                }
+                Debug.Log("好友 人数：" + friendList.Count);
+                Debug.Log("黑名单人数：" + blackList.Count);
+                Debug.Log("被拉黑人数：" + beBlackList.Count);
+            });
+        }
+        /// <summary>
+        /// 获取好友申请
+        /// </summary>
+        public void GetApplayFriendList()
+        {
+            InfoHandle.GetApplyList(json =>
+            {
+                Debug.Log(json);
+                JObject obj = (JObject)JsonConvert.DeserializeObject(json);
+                string msg = (string)obj["msg"];
+                int code = (int)obj["code"];
+                var dataJson = obj["data"].ToString();
+                //Debug.Log(msg);
+                //Debug.Log(code);
+                //Debug.Log(dataJson);
+                if (code == 200)
+                {
+                    List<ApplyFriend> friends = JsonConvert.DeserializeObject<List<ApplyFriend>>(dataJson);
+                    List<string> chatNos = new List<string>();
+                    foreach (var friend in applyList)
+                    {
+                        if (!friends.Exists(f => f.fromChatNo == friend.Key))
+                        {
+                            chatNos.Add(friend.Key);
+                        }
+                    }
+                    foreach (var id in chatNos)
+                    {
+                        applyList.Remove(id);
+                    }
+                    foreach (var friend in friends)
+                    {
+                        if (applyList.ContainsKey(friend.fromChatNo))
+                        {
+                            applyList[friend.fromChatNo].CopyForValue(friend);
+                        }
+                        else
+                        {
+                            applyList.Add(friend.fromChatNo, friend);
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"获取好友列表失败：{msg}\n返回码{code}");
+                }
+            });
+        }
+        /// <summary>
+        /// 获取在线人员
+        /// </summary>
+        public void GetOnlineFriend()
+        {
+            InfoHandle.GetOnlineFriend(json =>
+            {
+                Debug.Log(json);
+                List<string> chatNos = JsonConvert.DeserializeObject<List<string>>(json);
+                foreach (var friend in friendList)
+                {
+                    if (chatNos.Contains(friend.Key))
+                    {
+                        friend.Value.isOnLine = true;
+                    }
+                    else
+                    {
+                        friend.Value.isOnLine = false;
+                    }
+                }
+            });
+        }
+
+        public void OnTagInit()
+        {
+            InfoHandle.GetMyTags(json =>
+            {
+                Debug.Log("我的标签列表" + json);
+                JObject obj = (JObject)JsonConvert.DeserializeObject(json);
+                string msg = (string)obj["msg"];
+                int code = (int)obj["code"];
+                var dataJson = obj["data"].ToString();
+                if (code == 200)
+                {
+                    var tags = JsonConvert.DeserializeObject<List<MyTag>>(dataJson);
+                    List<MyTag> temp = new List<MyTag>();
+                    // 不在 Tags内的标签
+                    foreach (var item in myTags)
+                    {
+                        if (!tags.Any(tag => tag.labelId == item.labelId))
+                        {
+                            temp.Add(item);
+                        }
+                    }
+                    // 移除 不存在的 标签
+                    foreach (var item in temp)
+                    {
+                        myTags.Remove(item);
+                    }
+                    // 添加 新标签
+                    foreach (var item in tags)
+                    {
+                        if (!myTags.Any(tag => tag.labelId == item.labelId))
+                        {
+                            myTags.Add(item);
+                        }
+                    }
+                }
+                Debug.Log("我的标签数量：" + myTags.Count);
+            });
+        }
+        #region 收到服务器消息
+
+        /// <summary>
+        /// 收到聊天信息触发
+        /// </summary>
+        /// <param name="json"></param>
+        public void OnChatMsg(string json)
+        {
+            JObject jObj = JsonConvert.DeserializeObject<JObject>(json);
+            string content = jObj["content"].ToString();
+            string receiveChatNo = jObj["receiveChatNo"].ToString();
+            string sendChatNo = jObj["sendChatNo"].ToString();
+            if (Global.chatNo == receiveChatNo)
+            {
+                if (friendList.ContainsKey(sendChatNo))
+                {
+                    if (chatWindow?.friendContent?.friendChatNo == sendChatNo)
+                    {
+                        chatWindow.OnReceiveMsg(content);
+                    }
+                    friendList[sendChatNo].chatMsgList.Add(new ChatContent(false, content));
+                }
+                else
+                {
+                    Debug.LogError("不在名单内");
+                }
+            }
+            Debug.Log(json);
+
+        }
+        /// <summary>
+        /// 到在线状态改变触发
+        /// </summary>
+        /// <param name="json"></param>
+        public void OnChatOnLineChange(string json)
+        {
+            JObject jObj = JsonConvert.DeserializeObject<JObject>(json);
+            string content = jObj["content"].ToString();
+            string chatNo = jObj["extend"]["data"].ToString();
+            //Debug.Log(json);
+            if (friendList.ContainsKey(chatNo))
+            {
+                friendList[chatNo].isOnLine = content == "上线";
+            }
+            else if (blackList.ContainsKey(chatNo))
+            {
+                blackList[chatNo].isOnLine = content == "上线";
+            }
+            else if (beBlackList.ContainsKey(chatNo))
+            {
+                beBlackList[chatNo].isOnLine = content == "上线";
+            }
+            else if (applyList.ContainsKey(chatNo))
+            {
+                applyList[chatNo].isOnLine = content == "上线";
+            }
+            else
+            {
+                Debug.LogError("不在名单内");
+            }
+        }
+        /// <summary>
+        /// 标签初始化
+        /// </summary>
+        /// <param name="json"></param>
+        #endregion
+
+
+
+        public void Show()
+        {
+            transform.Find("Window").gameObject.SetActive(true);
+            GetComponent<Image>().enabled = true;
+        }
+        public void Close()
+        {
+            transform.Find("Window").gameObject.SetActive(false);
+            GetComponent<Image>().enabled = false;
+        }
+    }
+}

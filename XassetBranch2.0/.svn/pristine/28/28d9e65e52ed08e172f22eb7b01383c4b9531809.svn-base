@@ -1,0 +1,26 @@
+{
+    "msg": "操作成功",
+    "code": 200,
+    "data": [
+        {
+            "createBy": "unity",
+            "createTime": "2023-07-25 23:28:04",
+            "updateBy": null,
+            "updateTime": null,
+            "labelId": 4,
+            "studentId": 1,
+            "name": "标签1",
+            "delFlag": "0"
+        },
+        {
+            "createBy": "unity",
+            "createTime": "2023-07-25 23:28:10",
+            "updateBy": null,
+            "updateTime": null,
+            "labelId": 5,
+            "studentId": 1,
+            "name": "标签2",
+            "delFlag": "0"
+        }
+    ]
+}

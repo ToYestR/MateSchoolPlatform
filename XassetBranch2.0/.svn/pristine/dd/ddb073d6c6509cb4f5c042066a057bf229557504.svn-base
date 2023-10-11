@@ -1,0 +1,208 @@
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace FriendSystem
+{
+    /// <summary>
+    /// 个人中心 类
+    /// </summary>
+    public class PersonalCenter : MonoBehaviour
+    {
+        public static PersonalCenter getInstance;
+        #region 属性
+        [Header("输入")]
+        [SerializeField] InputField nickName;       // 昵称
+        [SerializeField] InputField accountNumber;  // 账号
+        [SerializeField] InputField age;            // 年龄
+        [SerializeField] Dropdown sex;              // 性别
+        [SerializeField] InputField mailbox;        // 邮箱
+        [SerializeField] Dropdown job;              // 职业
+        [SerializeField] InputField workUnit;       // 工作单位
+
+        [Header("按钮")]
+        [SerializeField] Button updateIcon;         // 上传头像
+        [SerializeField] Button addItem;            // 教育历程添加 按钮
+        [SerializeField] Button saveBtn;            // 保存 按钮
+        [SerializeField] Button cancelBtn;           // 取消 按钮
+        [SerializeField] Button closeBtn;           // 关闭按钮
+        [Space(10)]
+        [SerializeField] Toggle nikeNameBtn;        // 头像 修改    
+        [SerializeField] Toggle ageBtn;             // 年龄 修改
+        [SerializeField] Toggle mailboxBtn;         // 邮箱 修改
+        [SerializeField] Toggle workUnitBtn;        // 工作单位 修改
+
+        [Header("教育历程")]
+        [SerializeField] Transform content;         // 教育历程条目父节点
+        #endregion
+
+        [Header("图片")]
+        [SerializeField] Image icon;
+
+        private void Awake()
+        {
+            getInstance = this;
+        }
+        private void Start()
+        {
+            Init();
+            EventInit();
+        }
+        private void Init()
+        {
+            // 字段
+            icon.sprite = HeadSculptureWindow.getInstance.GetSprite(PersonalInfo.icon);
+            nickName.text = PersonalInfo.nickName;
+            accountNumber.text = PersonalInfo.accountNumber;
+            age.text = PersonalInfo.age.ToString();
+            sex.value = PersonalInfo.sex;
+            mailbox.text = PersonalInfo.mailbox;
+            job.captionText.text = PersonalInfo.job;
+            workUnit.text = PersonalInfo.workUnit;
+
+            // 状态
+            nickName.readOnly = true;
+            age.readOnly = true;
+            mailbox.readOnly = true;
+            workUnit.readOnly = true;
+            accountNumber.readOnly = true;
+
+            // 开关
+            nikeNameBtn.isOn = false;
+            ageBtn.isOn = false;
+            mailboxBtn.isOn = false;
+            workUnitBtn.isOn = false;
+
+            // 教育
+            EducationItem[] items = content.GetComponentsInChildren<EducationItem>();
+            GameObject prefabItem = content.GetChild(0).gameObject;
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i].Delete();
+            }
+            if (PersonalInfo.educations.Count > 0)
+            {
+                for (int i = content.childCount; i < PersonalInfo.educations.Count; i++)
+                {
+                    Instantiate(prefabItem, content);
+                }
+                items = content.GetComponentsInChildren<EducationItem>();
+                for (int i = 0; i < PersonalInfo.educations.Count; i++)
+                {
+                    items[i].UpdateEducation(PersonalInfo.educations[i]);
+                }
+            }
+        }
+
+        private void EventInit()
+        {
+            /*********************************************************************/
+            updateIcon.onClick.AddListener(() =>
+            {
+                HeadSculptureWindow.getInstance.OpenHeadSculptureWindow((sprite, id) =>
+                {
+                    icon.sprite = sprite;
+                    icon.SetNativeSize();
+                    PersonalInfo.icon = id;
+                    Global.portrait = PersonalInfo.icon;
+                });
+            });
+            /*********************************************************************/
+            nikeNameBtn.onValueChanged.AddListener(arg =>
+            {
+                nickName.readOnly = !arg;
+            });
+            ageBtn.onValueChanged.AddListener(arg =>
+            {
+                age.readOnly = !arg;
+            });
+            mailboxBtn.onValueChanged.AddListener(arg =>
+            {
+                mailbox.readOnly = !arg;
+            });
+            workUnitBtn.onValueChanged.AddListener(arg =>
+            {
+                workUnit.readOnly = !arg;
+            });
+            /*********************************************************************/
+            addItem.onClick.AddListener(() =>
+            {
+                GameObject prefabItem = content.GetChild(0).gameObject;
+                Instantiate(prefabItem, content);
+            });
+            cancelBtn.onClick.AddListener(() =>
+            {
+                Init();
+            });
+            closeBtn.onClick.AddListener(() =>
+            {
+                ToggleWindow(false);
+            });
+            saveBtn.onClick.AddListener(() =>
+            {
+                // 参数保存
+                PersonalInfo.nickName = nickName.text;
+                PersonalInfo.accountNumber = accountNumber.text;
+                int.TryParse(age.text, out PersonalInfo.age);
+                PersonalInfo.sex = sex.value;
+                PersonalInfo.mailbox = mailbox.text;
+                PersonalInfo.job = job.captionText.text;
+                PersonalInfo.workUnit = workUnit.text;
+
+
+
+                // 序列化教育历程
+                EducationItem[] items = content.GetComponentsInChildren<EducationItem>();
+                List<EducationInfo> infos = new List<EducationInfo>();
+                foreach (var item in items)
+                {
+                    if (item.info != null)
+                    {
+                        infos.Add(item.info);
+                    }
+                }
+                string dataStr = JsonConvert.SerializeObject(infos);
+                PersonalInfo.educationsStr = dataStr.Replace("\"", "'");
+                //if(PersonalInfo.educationsStr.Length>255)
+                //{
+                //    Debug.LogError("教育历程超过255个字符，上传失败");
+                //    return;
+                //}
+                JObject jobect = new JObject();
+                jobect.Add("id", Global.uid);
+                jobect.Add("user_name", PersonalInfo.accountNumber);
+                jobect.Add("nick_name", PersonalInfo.nickName);
+                jobect.Add("age", PersonalInfo.age);
+                jobect.Add("sex", PersonalInfo.sex);
+                jobect.Add("mailbox", PersonalInfo.mailbox);
+                jobect.Add("job", PersonalInfo.job);
+                jobect.Add("workUnit", PersonalInfo.workUnit);
+                jobect.Add("avatar", PersonalInfo.icon);
+                jobect.Add("education", PersonalInfo.educationsStr);
+                Debug.Log(jobect.ToString());
+                InfoHandle.EditStudentInfo(jobect.ToString(), OnSubmitReceive);
+
+                ToggleWindow(false);
+            });
+        }
+        private void ToggleWindow(bool toggle)
+        {
+            transform.GetChild(0).gameObject.SetActive(toggle);
+        }
+        private void OnSubmitReceive(string json)
+        {
+            Debug.Log("提交个人信息回应：" + json);
+        }
+        public void Show()
+        {
+            ToggleWindow(true);
+        }
+        public void Close()
+        {
+            ToggleWindow(false);
+        }
+    }
+}

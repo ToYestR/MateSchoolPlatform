@@ -1,0 +1,2776 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03142c330ced64e0ab46cddcd0484ab7, type: 3}
+  m_Name: Rules
+  m_EditorClassIdentifier: 
+  searchPatternAsset: '*.asset'
+  searchPatternController: '*.controller'
+  searchPatternDir: '*'
+  searchPatternMaterial: '*.mat'
+  searchPatternPng: '*.png'
+  searchPatternPrefab: '*.prefab'
+  searchPatternScene: '*.unity'
+  searchPatternText: '*.txt,*.bytes,*.json,*.csv,*.xml,*htm,*.html,*.yaml,*.fnt'
+  version: 37
+  scenesInBuild:
+  - {fileID: 102900000, guid: 90947e6f5df7819409f2d83abfeaf45b, type: 3}
+  - {fileID: 102900000, guid: 9451aa3c512d7d149b8dfc6f4531295e, type: 3}
+  rules:
+  - searchPath: Assets/Resources/Scenes/
+    searchPattern: '*'
+    nameBy: 2
+    assetBundleName: 
+  - searchPath: Assets/FriendSystem
+    searchPattern: '*'
+    nameBy: 2
+    assetBundleName: 
+  - searchPath: Assets/SetRole
+    searchPattern: '*'
+    nameBy: 1
+    assetBundleName: 
+  ruleAssets:
+  - bundle: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    path: "Assets/FriendSystem/Font/7000\u5E38\u7528\u5B57.txt"
+  - bundle: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    path: Assets/FriendSystem/Font/OPPOSans-Bold.ttf
+  - bundle: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    path: Assets/FriendSystem/Font/OPPOSans-Medium.ttf
+  - bundle: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    path: Assets/FriendSystem/Font/SIMYOU SDF.asset
+  - bundle: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    path: Assets/FriendSystem/Font/SIMYOU.TTF
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/12\u5C0F\u4EBA-08.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u4E09\u89D2\u5F62
+      1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u52FE\u9009.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u53D6\u6D88
+      \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u53D6\u6D88.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u56FE\u5C42
+      14.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u56FE\u5C42
+      15.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5706\u89D2\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5BF9\u52FE.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5F62\u72B6
+      2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6210\u5458.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6807\u7B7E.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1-3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1-4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1-5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      2-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      2-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      2-3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      2-4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      3-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      3-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      4 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      5-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      5-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      6-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      6-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      6.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      7 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      7.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706
+      8.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6DFB\u52A0\u597D\u53CB.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u76F4\u7EBF
+      1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u76F4\u7EBF
+      3 \u62F7\u8D1D 2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      10.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      11-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      11-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      11.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      12.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      13.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      14.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      15 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      15.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      16 \u62F7\u8D1D 2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      16 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      16.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      17 \u62F7\u8D1D-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      17 \u62F7\u8D1D.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      17.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2 \u62F7\u8D1D 14.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2 \u62F7\u8D1D 15.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2 \u62F7\u8D1D 16.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5-1.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5-3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5-4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5-5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      6.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      7 \u62F7\u8D1D 2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      7 \u62F7\u8D1D 3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      7 \u62F7\u8D1D 4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      7 \u62F7\u8D1D 5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      7.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      8.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62
+      9.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-2.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-3.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-4.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u8868\u60C5.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u8868\u60C5\u5305.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u9009\u62E9\u9AD8\u4EAE.png"
+  - bundle: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u9519\u8BEF.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/toggle\u5706\u89D2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u52FE\u9009.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u53D6\u6D88-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u53D6\u6D88.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42
+      13.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42
+      14.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42
+      16.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42
+      17.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42
+      21.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5706\u89D2\u77E9\u5F62
+      2 \u62F7\u8D1D 3.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5706\u89D2\u77E9\u5F62
+      2 \u62F7\u8D1D 4.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u597D\u53CB\u540D\u5355.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5F62\u72B6
+      2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6210\u5458.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      1-3.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      2-2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      3.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      4 \u62F7\u8D1D 2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      4 \u62F7\u8D1D.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706
+      4.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6DFB\u52A0\u597D\u53CB.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6E10\u53D8\u586B\u5145
+      4.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u76F4\u7EBF
+      3 \u62F7\u8D1D 2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      10-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      10.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11 \u62F7\u8D1D 2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11 \u62F7\u8D1D 3.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11 \u62F7\u8D1D 4.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11 \u62F7\u8D1D 5.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11 \u62F7\u8D1D.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      11.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      17 \u62F7\u8D1D.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      17.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      2 \u62F7\u8D1D 16.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      2-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      5-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      5-2.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      5-3.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      5.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      6.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      7 \u62F7\u8D1D 5.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      7 \u62F7\u8D1D 6.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      7 \u62F7\u8D1D.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      7-1.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      7.png"
+  - bundle: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62
+      9.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u4E09\u89D2\u5F62
+      1 \u62F7\u8D1D 5-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u4E09\u89D2\u5F62
+      1 \u62F7\u8D1D 5.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5220\u9664
+      \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5220\u9664.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      13.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      14.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      20.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      21.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      22.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      23.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      24.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      25 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      25.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      26.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      27 \u62F7\u8D1D-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      27 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      27.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      28.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42
+      29.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5706\u89D2\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u589E\u52A0\u6DFB\u52A0\u52A0\u53F7.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5934\u50CF
+      \u7537\u5B69.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5F62\u72B6
+      2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6210\u5458.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6807\u7B7E.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      2-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      2-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3 \u62F7\u8D1D 2-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3 \u62F7\u8D1D 2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3 \u62F7\u8D1D-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      4 \u62F7\u8D1D 3-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      4 \u62F7\u8D1D 3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706
+      4.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6DFB\u52A0\u597D\u53CB.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      4.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D 2-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D 2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D 3-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D 3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF
+      3 \u62F7\u8D1D 2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      10-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      10-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      10.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      11-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      11.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      12 \u62F7\u8D1D 2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      12 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      12.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 14.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 15.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-4.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16-5.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2 \u62F7\u8D1D 16.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      4-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      4.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      5-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      5-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      5-3.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      5-4.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      5.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      6.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7 \u62F7\u8D1D 5.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7 \u62F7\u8D1D-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7 \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      7.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      9-1.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      9-2.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62
+      9.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u7F16\u8F91
+      \u62F7\u8D1D.png"
+  - bundle: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u7F16\u8F91.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      3.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      5.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      6.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u6846.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u76F4\u7EBF
+      2.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      1 \u62F7\u8D1D.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      1.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D 2-1.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D 2.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D 2-1.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D 2.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4 \u62F7\u8D1D.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4-1.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4.png"
+  - bundle: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    path: "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u80CC\u666F.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/IconMask.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u5927\u53C9.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u5927\u53C9icon.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u6587\u5B57.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0A\u4F20.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0A\u4F20\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6587\u5B57.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6587\u5B57\u6700\u5E95\u4E0B.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u79FB\u52A8\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934icon.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4E0A.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4E0B.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4EA4\u4E92.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u9009\u4E2D\u77E9\u5F62.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4FDD\u5B58.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4FDD\u5B58\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u53D6\u6D88.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u53D6\u6D88\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF
+      \u5973\u5B69.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF
+      \u7537\u5B69.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5B66\u6821.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6027\u522B\u4E0B\u62C9\u7BAD\u5934.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u641C\u7D22icon.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6559\u80B2\u5386\u7A0B.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6559\u80B2\u5386\u7A0B\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589E.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589Eicon.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589E\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6635\u79F0.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6635\u79F0\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0\u5927\u5B66.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0\u5B66\u6821.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u70B9\u51FB\u4FEE\u6539.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u70B9\u51FB\u4FEE\u6539\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u76F4\u7EBF.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u7F16\u8F91.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u7F16\u8F91icon.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666Ftop.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666F\u5927\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666F\u6846.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u8BF7\u9009\u62E9\u5B66\u6821.png"
+  - bundle: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    path: "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u9009\u62E9\u5B66\u6821\u6846.png"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.1.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.2.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.3.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.4.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.5.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.6.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.1.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.2.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.3.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.4.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.5.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.1.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.2.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.3.jpg"
+  - bundle: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    path: "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.4.jpg"
+  - bundle: 2d8268e959d50ba0ac54af0195aa1482.unity3d
+    path: "Assets/FriendSystem/Image/\u5934\u50CF/\u8868\u60C5\u7ED8\u753B.asset"
+  - bundle: 2d8268e959d50ba0ac54af0195aa1482.unity3d
+    path: "Assets/FriendSystem/Image/\u5934\u50CF/\u8868\u60C5\u7ED8\u753B.png"
+  - bundle: ef1c416cc920286a0cbb6b450f657baf.unity3d
+    path: "Assets/FriendSystem/Image/\u8868\u60C5/Emoji.asset"
+  - bundle: ef1c416cc920286a0cbb6b450f657baf.unity3d
+    path: "Assets/FriendSystem/Image/\u8868\u60C5/Emoji.png"
+  - bundle: f8353825895170d7695ae7d2f3389fa3.unity3d
+    path: Assets/FriendSystem/Json.json
+  - bundle: e98dee5aa69e5a360c0f03b5d2d3c1f5.unity3d
+    path: Assets/FriendSystem/Prefabs/FriendSystemCanvas.prefab
+  - bundle: a30cab2bca684bbcdaf2a9d604b1f42a.unity3d
+    path: Assets/FriendSystem/Scenes/FriendScene.unity
+  - bundle: a30cab2bca684bbcdaf2a9d604b1f42a.unity3d
+    path: Assets/FriendSystem/Scenes/TestScene.unity
+  - bundle: 903bf7bc62e30daf1b67c5656deff678.unity3d
+    path: Assets/FriendSystem/Texture/C_3.jpg
+  - bundle: 903bf7bc62e30daf1b67c5656deff678.unity3d
+    path: Assets/FriendSystem/Texture/Plane.mat
+  - bundle: 5e19acf83e8cf5bcd5322469431f5a33.unity3d
+    path: Assets/Resources/Scenes/DemoChildScene.unity
+  - bundle: 5e19acf83e8cf5bcd5322469431f5a33.unity3d
+    path: Assets/Resources/Scenes/DemoScene.unity
+  - bundle: a57f8494204dfe642653c007d458180b.unity3d
+    path: Assets/SetRole/Animators/PlayerAni.controller
+  - bundle: efa075478d453563b8850f009ef826b7.unity3d
+    path: Assets/SetRole/Font/OPPOSANS-BOLD.TTF
+  - bundle: 478d0728934bd3ad491aa79f722111c8.unity3d
+    path: Assets/SetRole/Font/OPPOSANS-MEDIUM.TTF
+  - bundle: 0ec842c4aa3e25f1e22eb9a67bbe1003.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Fall.controller
+  - bundle: b7287604cd93ed6cf375fe4d96c13499.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Idle.controller
+  - bundle: 17780237bc5a9df2fc360f8469905668.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Jump.controller
+  - bundle: 9f91822974905496deb1b908cfbf0308.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Run.controller
+  - bundle: 486c5460125d15829d4de7de4bbc9c6d.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Sprint.controller
+  - bundle: c231539aefe09036bec98dc811082ebe.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Strafe.controller
+  - bundle: 06074eec099d973fcfc6e32ec2652249.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Talk.controller
+  - bundle: e02df004440e930a3b0a9ae169bb85e3.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Walk.controller
+  - bundle: 308f69444748a8056dcd40c3c416e14f.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/Basic Motions - Scene.unity
+  - bundle: 392979cfc0e96bb3a15d9a404084a1bd.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/Materials/BasicMotionsFloor.mat
+  - bundle: 87a55c980e956f8ca7851ff7470af2c0.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/Materials/BasicMotionsMaterial.mat
+  - bundle: b7be471107ffe786a4be24bdf9fcf0c4.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/Prefabs/BasicMotionsDummy.prefab
+  - bundle: d155bc5a850168cd3f5f96e3c576cbda.unity3d
+    path: Assets/SetRole/Kevin Iglesias/Basic Motions/Textures/BasicMotionsTexture.png
+  - bundle: db7e5f3ff51c1ad4966cffb48699a639.unity3d
+    path: Assets/SetRole/Sources/Character/Env/Glow/GlowEffectDownsample.shader
+  - bundle: 5938540555191a00d527eb6ca56fadda.unity3d
+    path: Assets/SetRole/Sources/Character/Env/MirrorReflection/MirrorReflection.shader
+  - bundle: 72635f462792025a86574de5fcf675e3.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/artplant_poster.mat
+  - bundle: 0da2ac9af90938eeaa817ba4e55679f0.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/black_wood.mat
+  - bundle: 1d9d58a37a8dcbe97d5a15e18a3075b4.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/carpet.mat
+  - bundle: 9d9fad6d4ccd0f72c34858d1d10b26a6.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/dressing_room-metal.mat
+  - bundle: a9d6a829ea69bef5bd77edfcb8ed093d.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/dressing_room-mirror.mat
+  - bundle: 0c79006a71aa2252368c6991763a9cfc.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/floor_wood.mat
+  - bundle: 929ec82843109ff3d5f4096187cae55a.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/hanging_clothes.mat
+  - bundle: 27c1ba62d720195ec8e7a5dfcd4c3269.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/roof.mat
+  - bundle: b89e7f903d5a8397a2de83cacbadb52a.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/unity_poster.mat
+  - bundle: 2da031d19fdde57f3c604c56dd377026.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/wall_plank.mat
+  - bundle: 675c491bb20740ad49ce1d6b35d8da6f.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/Materials/wallpaper.mat
+  - bundle: 02748ffc54cdb5c06c678126122e982d.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/New Cubemap.cubemap
+  - bundle: 752456fb9fc547dc7f3499990d74620f.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/artplant_poster.tga
+  - bundle: 4361114af7fbd32e6b50b11f111e5c5c.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/black_wood.tga
+  - bundle: 5c91c8330ed5f356fd95eeb43adc6261.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/carpet.tga
+  - bundle: 7e9bc1e18b49a888ff2acf776e9dde60.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/carpetLightingMap.tga
+  - bundle: 14b6d6886ba5a2ede47ee70a535bd715.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_x12.tga
+  - bundle: d7dc917295f93d672fa912d4d9eddd7d.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_y1.tga
+  - bundle: 77a549d7670c4860b43d56428ff7f21d.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_y2.tga
+  - bundle: e4e5fe46ae3e38978455c7037a209a6d.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/floor_wood.tga
+  - bundle: ac1e6bd7a6140537fda9b3935d8a347b.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/hanging_clothes.tga
+  - bundle: 862b6b361a0732b187ac99c18f8fe96f.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/roof.tga
+  - bundle: 9421ea3e3ed5c2d90df4586766e8be20.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/roomLightingMap.tga
+  - bundle: 801c17d968cfadd61949249289f571de.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/unity_poster.tga
+  - bundle: 2d0c2eaeb1817b6d5d206fba5ded1a29.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/wall_plank.tga
+  - bundle: 41126aa9bc08e3aaaa9fdcd51da1402a.unity3d
+    path: Assets/SetRole/Sources/Character/Env/dressing_room/textures/wallpaper.tga
+  - bundle: 953898f8d6014e05a05099a726568c6c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_blue.mat
+  - bundle: df93ac2aa2e7a9d1176719dcdcf1b22f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_brown.mat
+  - bundle: f255ae8dd772dcd47ce88c197fb1e57d.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_green.mat
+  - bundle: 4f2a70cdb9ce5b976d32268f92395c02.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_face-1.mat
+  - bundle: a4d5c396fa315a4f8091cda176dedafe.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_face-2.mat
+  - bundle: 6643cf0c6891b0105d3dceae4994027c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_brown.mat
+  - bundle: b4869284d4169ebce66fc7321b0de4f8.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_red.mat
+  - bundle: 18c9a84c1ead255a8784985274fac59c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_yellow.mat
+  - bundle: 639e812567d6e9bdb8a78be97a238246.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_cyan.mat
+  - bundle: 2cea248fca0101e6e0d625173a5103d6.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_dark.mat
+  - bundle: 9dbf3c0f5ae5a9855807a81204a567ab.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_pink.mat
+  - bundle: dd7f0f073243aedf36d99307f6d64e49.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_blue.mat
+  - bundle: a5f11c8888b440dfd36685dc7465f6bb.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_dark.mat
+  - bundle: 4e8fb13691d7f227544d0704ad545e79.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_green.mat
+  - bundle: 957d38ddb04473384d891047d61c7ad2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_black.mat
+  - bundle: 36ce39c98249a20e01e676f91773b9eb.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_blue.mat
+  - bundle: ff65d9906ca05bd84325b94f20678427.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_orange.mat
+  - bundle: 01d9be322f58f7ac305c5e2aa52d12b5.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_blue.mat
+  - bundle: 9894e7b0da58b47e12ea2d8f156eebd1.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_green.mat
+  - bundle: 0099f522d3e8a7c05faf84bfa2baee4f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_yellow.mat
+  - bundle: fc81df10699d9a4f4a762f4598d6bbfc.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_blue.mat
+  - bundle: d4fd95c3552217cc653d3c9e76457b4f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_red.mat
+  - bundle: 7b13b2b89fcbdd9beaf14cd3556acf3c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_yellow.mat
+  - bundle: 8715e08bb6afac794ed2d87b1959c2ec.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_blue.mat
+  - bundle: 07f7d015b12ed010dc63d397fc50487a.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_green.mat
+  - bundle: 83998c537e23627b9bdd61047c50b01b.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_pink.mat
+  - bundle: 09e6f808936a6519ea60a8f2e67dbf9c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_green.mat
+  - bundle: 7381bd5ac302460eeffc33191197dcf2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_orange.mat
+  - bundle: fe1785985503217969c791ec96b1e23d.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_purple.mat
+  - bundle: 336245cb277d0f4cf70d37f55011fd84.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_blue.tga
+  - bundle: 026b95a9b9afb416699dda6985289519.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_brown.tga
+  - bundle: 9e9451abaa3fb13ebe1ee8a9eb7442e2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_green.tga
+  - bundle: cd608ef532aff563eafd65d34f1bc7c0.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_face-1.tga
+  - bundle: 5b3b59ae1ffab305a97f7933ee15a345.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_face-1_normal.tga
+  - bundle: 0e9b87b91916cbc8c031ee8b4ef72576.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_face-2.tga
+  - bundle: 5d2fa6a14e731c3c91d37900da671058.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_face-2_normal.tga
+  - bundle: a0a2fdf8e3b77f30e0b1145723869610.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_brown.tga
+  - bundle: 61dfea38df9eeefd8d072037ed7e1bfb.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_normal.tga
+  - bundle: ba1908318c70b728425e9ce55ddc5cd3.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_red.tga
+  - bundle: 53bf6e575500d0b886b92d6d5f0730c4.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_yellow.tga
+  - bundle: c0654e826feed41f95e2d5b0028a3f97.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_cyan.tga
+  - bundle: 820f8e1e1392d72631c98d153d49e902.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_dark.tga
+  - bundle: 9894ef169329037e805b7e04998d42be.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_pink.tga
+  - bundle: 76845f4015613da1140701e66f908f36.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_blue.tga
+  - bundle: 5efd8b20eea2b953c194acce71a369f6.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_dark.tga
+  - bundle: ce6aa6453d575a92fc76f2e8d081e6b7.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_green.tga
+  - bundle: 516ac6bae401675606fb8d65dc2367cb.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_normal.tga
+  - bundle: 2748bd2d28d84b0b7e71070746562718.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_black.tga
+  - bundle: 1e4cb02aebbc7507b7f818a7181fa20c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_blue.tga
+  - bundle: c8456a1c853327087b2cd74e45649d05.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_normal.tga
+  - bundle: 5aaf86afb06564b6f7a06e46ae1d7eae.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_orange.tga
+  - bundle: c9b861ca987fe0183b1e99409d8fee61.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_blue.tga
+  - bundle: fc447fd8da0611f356da2a694ced3fa1.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_green.tga
+  - bundle: aa11f283410bc258548c0590933e85e2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_normal.tga
+  - bundle: 4ea0c729c0d4285ada4cbbcf9f6a2036.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_yellow.tga
+  - bundle: 9b54c9c4c126ade72a5b53830c2146c7.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_blue.tga
+  - bundle: 954c6100c2effceb2db6831a5d9a089c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_normal.tga
+  - bundle: 756f3fd47c39fab5ef7d93d58de8dfdb.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_red.tga
+  - bundle: 15aa58c7fbfce6729d29aa0d07b3500b.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_yellow.tga
+  - bundle: e5daa62ae068c04ffb4de270e12bf70b.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_blue.tga
+  - bundle: 9335a0ef7de272918a8ea3331e83c9f9.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_green.tga
+  - bundle: 0fdcc95e1f7fd870f75aa89c4285ec15.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_normal.tga
+  - bundle: 6c336f69406e831ec5e305828986f409.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_pink.tga
+  - bundle: eb940c97ada5c606e7b946677025cdc4.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_green.tga
+  - bundle: 549d385f1a12781c5e9e544f428fb547.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_normal.tga
+  - bundle: f107e407aaf35bada0abea6675251351.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_orange.tga
+  - bundle: fcf1c71e7f68d68cb8a53d5abe0f7865.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_purple.tga
+  - bundle: 799119bcd2f17792764a6c54d86518a2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_blue.mat
+  - bundle: 4c00aaf4c8e19c40aaa0ae3bb3de795e.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_brown.mat
+  - bundle: 5bd05f5db351fa3aacdf01bb240d4e1e.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_green.mat
+  - bundle: 259c8eb2f142c403c3198bc8a1a3d6df.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_face-1.mat
+  - bundle: a5c510adc2800c21c15dfd6e71f7835a.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_face-2.mat
+  - bundle: bfdb34aa66b3ceb9d3cb34e4e2faea16.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_blond.mat
+  - bundle: 6b82bccc5f94a7f58d1709578cc3b03b.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_brown.mat
+  - bundle: e92601378bc89ab0fd2e40345f997fe6.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_orange.mat
+  - bundle: c5203c2cc4a78833b52f25b66ca95b14.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_blond.mat
+  - bundle: 76eb741b6aa49f242818730f56ac97d1.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_brown.mat
+  - bundle: dde73066e3a5398640774ece4b4bc433.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_red.mat
+  - bundle: 4613543fb1d68a049930a0c4ef371171.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_blue.mat
+  - bundle: b08a6b3d57e205261dda1c0a8deff110.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_dark.mat
+  - bundle: f565e3bf598f7e2824d2e275b992199c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_green.mat
+  - bundle: 6812adab1333bb03b7b1d37de922f3a2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_blue.mat
+  - bundle: 4545f963ca613f609bb9f1e94e7558ca.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_lillac.mat
+  - bundle: 8fa3de11ed0907e5e4f5827edca6fc9a.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_purple.mat
+  - bundle: ecd1890d4546af513ac7754514014cc4.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_black.mat
+  - bundle: 1aff985a0af14893d0ee8a0e2e48b0a5.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_green.mat
+  - bundle: ffd95afff99bd21ac7715a5e98ffb273.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_red.mat
+  - bundle: 09ad1263ee9e3cff9276f8c8c5dfac63.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_brown.mat
+  - bundle: c51edc2742ab8d56996ab4d387ebe5ef.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_dark.mat
+  - bundle: b0b838f0f7d2317cd2a86e8f2cf2cf8f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_red.mat
+  - bundle: b863a9bc7968220cfba7a0931ac75be9.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_blue.mat
+  - bundle: a2301db0751c794e33651bd704ff1369.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_pink.mat
+  - bundle: e7fd27323fd1a2665d6afa8d3f5cf641.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_yellow.mat
+  - bundle: e6c617338fe4459dc84c4e19504f9064.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_gray.mat
+  - bundle: 1e0dd06af7c242d3a8dc02f64d30fe28.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_green.mat
+  - bundle: 4e4775780f3d4556f985ca0adaf59b67.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_orange.mat
+  - bundle: 111ad172bfa690a60290cdfd87b182a8.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_blue.tga
+  - bundle: 06309fe95b4230f7cd8eceb3b26fca50.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_brown.tga
+  - bundle: 7b8184bed29907d46af9fab8d745661d.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_green.tga
+  - bundle: f2228bf4f0010296ad2b4e6ef3774517.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_face-1.tga
+  - bundle: b601929eae54b6fe1b8ccf5c06d17a5e.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_face-1_normal.tga
+  - bundle: 59643c19cb5a6ccdc256d8557eb11e03.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_face-2.tga
+  - bundle: e7530b406bebca20603b63159808feae.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_face-2_normal.tga
+  - bundle: b41baec88385dadac97c174df6aba372.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_blond.tga
+  - bundle: cbfc9e664744c278369d59e745acc77b.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_brown.tga
+  - bundle: 8048a48fcafe9f33aa96ba585fdeae89.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_normal.tga
+  - bundle: c9109b3effee4d7ab5e66e1001db1edf.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_orange.tga
+  - bundle: f47172a4717bfa21913b38332f160d62.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_blond.tga
+  - bundle: d9cfd6e546cd498f8d2a9064df8517a3.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_brown.tga
+  - bundle: 0c40ea4bf4bdbb14af64bdde73493cde.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_normal.tga
+  - bundle: 0252c0fe7c5c184ed6cb824910ec1749.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_red.tga
+  - bundle: 6bf7d330f806cf260d11ea7430176354.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_blue.tga
+  - bundle: fc113fd5681cc56014ee4b75ab7cf320.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_dark.tga
+  - bundle: 0a3f5058c3b73d2f1c83ec3c69b8f6a6.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_green.tga
+  - bundle: 184c5121754b261029278b11fa6d157f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_normal.tga
+  - bundle: 0d9cf4519cf88f15487fe5919b41b233.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_blue.tga
+  - bundle: 4da696c47f2a4bab2fdc543a9935a2d9.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_lillac.tga
+  - bundle: 3b8b71659f2c750d16c654f424d85087.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_normal.tga
+  - bundle: 8ba514db671d07fe5c58f3bd7bdd10bd.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_purple.tga
+  - bundle: d7349b3cddb15d3c09113d308d993f61.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_black.tga
+  - bundle: dc8c84b7e0c4b7d115b5d8ea60b330e0.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_green.tga
+  - bundle: aede6133850a8eb117c9ab80e1b3f32d.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_normal.tga
+  - bundle: ba8b35756b87333f1a218b6f454a58bd.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_red.tga
+  - bundle: cf072a5ed6cc8d3cc325e3cdaab2d7ec.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_brown.tga
+  - bundle: f8e4a3046523bac3c1b55b0cf6717473.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_dark.tga
+  - bundle: 92b825f12a752db7a296fff7da9a05db.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_normal.tga
+  - bundle: 8dbbb9f6ab28297919b09e87b3505b77.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_red.tga
+  - bundle: 8ed709d73256a6c0d63667df14f9ef9c.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_blue.tga
+  - bundle: b9d0e2d16dce5dac52184034e65099a2.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_normal.tga
+  - bundle: cd00a29ea3dd56db9d0635bd17a5e5b6.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_pink.tga
+  - bundle: 50a8df489cc82a60315468070165ae0f.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_yellow.tga
+  - bundle: 49d3c62995d547b3935c478a169fdb36.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_gray.tga
+  - bundle: 877600e6593beb5f259f66d9da170821.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_green.tga
+  - bundle: d8b7225e162b296cdfc0be649c046628.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_normal.tga
+  - bundle: 81fc022e1890f9d458fee5e27c29e35d.unity3d
+    path: Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_orange.tga
+  - bundle: 5857e37156be882241100ed5423d2a15.unity3d
+    path: Assets/SetRole/Sources/Character/characters/prefabs/env.prefab
+  - bundle: a6ca1e1a77ad335f13a1dc7273050a02.unity3d
+    path: Assets/SetRole/Sources/Character/characters/prefabs/shoes-1.prefab
+  - bundle: 7a1b14af9708feee7b3e2f7625562423.unity3d
+    path: Assets/SetRole/Sources/Sprite/Button Round Foreground.png
+  - bundle: bc677275bffb3805bdd76f9298c98c59.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/01.png
+  - bundle: fcb9d3b8bff099605d46f428ed0599ac.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/02.png
+  - bundle: 4b4480ce9eacb9dd09751164c0d07868.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/03.png
+  - bundle: e997e10a6e3007f080adcf2186a915dd.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/04.png
+  - bundle: 5f521561943e77b13e081c20cdcedd2c.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/05.png
+  - bundle: 908964c95a12561d534b2500d777e164.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/06.png
+  - bundle: 466775bf0de93e1f1d2758769c841835.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/07.png
+  - bundle: 69301ab9a703e5fff06ca2e1cfbc17e0.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/08.png
+  - bundle: c3b6d9d3ad426aa348d83211f3ea90aa.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/09.png
+  - bundle: 3374fb3ceb98fa0cd98ddfad45b313b7.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/10.png
+  - bundle: c2536888d98c422b75f0cd45d6119a2e.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/11.png
+  - bundle: 24f9fbdc2b41da136994b575602b037b.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/12.png
+  - bundle: e953a2f38cb65a1b874656535e977e3d.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/13.png
+  - bundle: 4044d84060b492abcedc9dfbc83036c9.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/14.png
+  - bundle: 003c7675e80fb273cc04272b9facb4d6.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/15.png
+  - bundle: 6c6d6700dd9bb929d05fe9872bb1c5e8.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/16.png
+  - bundle: 343898a05dcfdb0eb58c4d564ae69331.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/17.png
+  - bundle: 8141d8e51cbd9ff804f0df2252d69516.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/18.png
+  - bundle: 5f2ac83147d25139bc1ca56bdac2e4bd.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/19.png
+  - bundle: 1c3f473d09baafa61c257867a83d4c33.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/20.png
+  - bundle: 0231e04532be530a2478643a19ad065b.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/21.png
+  - bundle: ed98ab760a0cdbad61ecbd02dc50ab1d.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/22.png
+  - bundle: 36c1b25383994fc92e400263dbd04b24.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/23.png
+  - bundle: 4f070ff4f56b555eb07707b724c6d5e0.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/24.png
+  - bundle: 002399bd9510c8e612431579945bc66f.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/25.png
+  - bundle: dba5801c27f471a0f6563fd9080f901a.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/26.png
+  - bundle: 11787ae94a121057bc222a40db09836f.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/27.png
+  - bundle: 83407fc7deeaa1adbf95d5268e967f3a.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/28.png
+  - bundle: 136d5516fef06c7379cd48fec48aafa6.unity3d
+    path: Assets/SetRole/Sources/Sprite/Exhibitionhall/29.png
+  - bundle: ec3d4e699e49d810353f267f721a7a43.unity3d
+    path: Assets/SetRole/Sources/Sprite/Ok.png
+  - bundle: c8074054b1912ab0db8a013bcc97f58d.unity3d
+    path: Assets/SetRole/Sources/Sprite/Tab.png
+  - bundle: 95ac6cb026f6d12fe78d7952fe1998c2.unity3d
+    path: Assets/SetRole/Sources/Sprite/Thumb.png
+  - bundle: 03b5ad2674c6e31f4f28dfd1f6a59a06.unity3d
+    path: Assets/SetRole/Sources/Sprite/Window Frame.png
+  - bundle: fa47dbdbc3e91f06215920ab12a1819e.unity3d
+    path: Assets/SetRole/Sources/Sprite/Window.png
+  - bundle: f638b5a04d9b6236ab81b76eeabd0669.unity3d
+    path: Assets/SetRole/Sources/Sprite/frame - 1.png
+  - bundle: 106602462e5d447471a4e7322ce32c18.unity3d
+    path: Assets/SetRole/Sources/Sprite/tab - normal.png
+  - bundle: 5af128c627c4cbcc0cb82ebeca4f70ee.unity3d
+    path: Assets/SetRole/Sources/Sprite/tab - selected.png
+  - bundle: 5b1ccca1dd2176c0db5f5028cd5ac808.unity3d
+    path: Assets/SetRole/Sources/UI/boy/eyes/eyes_blue.jpg
+  - bundle: 579efaa385634c6d01a028ef61b5b97e.unity3d
+    path: Assets/SetRole/Sources/UI/boy/eyes/eyes_brown.jpg
+  - bundle: 8dbbfde9116b89be381b6795e5bf5759.unity3d
+    path: Assets/SetRole/Sources/UI/boy/eyes/eyes_green.jpg
+  - bundle: eaada166c86b06188e3ee985d5a3efc2.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_blond.jpg
+  - bundle: c36ab4d57a33cd11ba882c6a24519d17.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_blond1.jpg
+  - bundle: 8adbeef70a660868e0428f365df549f6.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_brown.jpg
+  - bundle: 30842b88e5d2e07dfdbd97407b27cec7.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_brown1.jpg
+  - bundle: 0f5f1dd0580a587ac0c6b6b4c11345d1.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_orange.jpg
+  - bundle: 3ce6d4220079b0b86a5b7b5b1f984246.unity3d
+    path: Assets/SetRole/Sources/UI/boy/hair/hair_orange1.jpg
+  - bundle: ec06298541c9cd29a4ad60dbf8cad0dc.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_blue.jpg
+  - bundle: 712775cc47e4ea1910a5719f433e5010.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_blue1.jpg
+  - bundle: 3f5a771253ccfab93911aa98b33da998.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_dark.jpg
+  - bundle: 212cfb27aed4b6df8650b01d2d77c5f4.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_green.jpg
+  - bundle: e24dda4e9e2dd80e6d064bc3b2e07f50.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_lillac.jpg
+  - bundle: 4d59d2b23def0984e1cb8f09b89cd653.unity3d
+    path: Assets/SetRole/Sources/UI/boy/pants/pants_purple.jpg
+  - bundle: e8adb22b40e5a4c6788db8a1911d8cee.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_black.jpg
+  - bundle: c8d9260cd1157e7fc664edf6e310e3a4.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_brown .jpg
+  - bundle: 2cb1cf314dcde545fea3c80b9f07a290.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_dark.jpg
+  - bundle: 08d38b459e9ce0638866394d7aa797ee.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_green.jpg
+  - bundle: cc930cea83d807af1096c52ea467226f.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_red1.jpg
+  - bundle: 3ece897422c9279e94f64f8592adc80d.unity3d
+    path: Assets/SetRole/Sources/UI/boy/shoes/shoes_red2.jpg
+  - bundle: e6f831adba36682b6f7fac7e46587173.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_blue.jpg
+  - bundle: c4f1fddfbb8e688e2f1331fbb8240027.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_gray.jpg
+  - bundle: cc1bf4806c48f7f936ddc924db46b5ca.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_green.jpg
+  - bundle: 1e85a13b6e2a229cf1e8faad8ad32aa6.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_orange.jpg
+  - bundle: 4894bcbc5ddc38e143b0d983774a252d.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_pink.jpg
+  - bundle: d79dfec4de0ba52011ec0134d8c3c9e0.unity3d
+    path: Assets/SetRole/Sources/UI/boy/top/top_yellow.jpg
+  - bundle: 9a82e2a4aa0f7aa6dd21fe1c4af89d4a.unity3d
+    path: Assets/SetRole/Sources/UI/girl/eyes/eyes_blue.jpg
+  - bundle: ea00630780d0286752c193b261fc3360.unity3d
+    path: Assets/SetRole/Sources/UI/girl/eyes/eyes_brown.jpg
+  - bundle: ea77d14ac3488a822b930cace008435c.unity3d
+    path: Assets/SetRole/Sources/UI/girl/eyes/eyes_green.jpg
+  - bundle: 5129fe5cbfb23a9acf41600ea0b3209f.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_brown.jpg
+  - bundle: 9ea2b26533feb9bd9d06daf1b1cc91ba.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_cyan.jpg
+  - bundle: 6b1f7b1f2477b2e25bfdfae2441b7d1b.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_dark.jpg
+  - bundle: 41bf8e147ff1ac86ddf9a218822d3605.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_pink.jpg
+  - bundle: a6e1a82dea6212365bb8b5e416788384.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_red.jpg
+  - bundle: d6dd70fa9d1abddae3c51f2457585996.unity3d
+    path: Assets/SetRole/Sources/UI/girl/hair/hair_yellow.jpg
+  - bundle: f13ab060061af1768216b7c8a631043f.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_black.jpg
+  - bundle: d17642836d8011d3ca5dddcadce245a2.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_blue.jpg
+  - bundle: 0125d0cb27a66d744709b00da60c54ef.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_blue1.jpg
+  - bundle: d57f4866951fc48876c9e18487a84efd.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_dark.jpg
+  - bundle: b3dd01a45cc104a15cbef47a643a13d5.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_green.jpg
+  - bundle: 48f631ddb2e47376a133b318a5ce7091.unity3d
+    path: Assets/SetRole/Sources/UI/girl/pants/pants_orange.jpg
+  - bundle: baf9bd83f76b028033826065225f8557.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_blue.jpg
+  - bundle: 107a57ef6cddc1887ee2466148dc814a.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_blue1.jpg
+  - bundle: c83d84ea23cc8f9568408f61d72da789.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_green.jpg
+  - bundle: 7143abe066d3955ea26ab56752d67d6f.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_red.jpg
+  - bundle: 818601ccdb89d81e15c9249b0746a539.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_yellow.jpg
+  - bundle: f2685a2fe8d4c683622aa94496ffe243.unity3d
+    path: Assets/SetRole/Sources/UI/girl/shoes/shoes_yellow1.jpg
+  - bundle: 1d9537880342c752763c3d6570b56e36.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_blue.jpg
+  - bundle: 06326eaf64bcca386933d1d1cfbb8f40.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_green.jpg
+  - bundle: 75188dc51986c1d5c751aa7d0aeae7bd.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_green2.jpg
+  - bundle: 6370b1ebfcd7949756cad6d49d2c7b7b.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_orange.jpg
+  - bundle: adc371bad891b20a4f72b432ebe3f3e1.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_pink.jpg
+  - bundle: d40cc51d3100a725e23dfbcc1912a465.unity3d
+    path: Assets/SetRole/Sources/UI/girl/top/top_purple.jpg
+  - bundle: d3209c2514a4d8bff92e92e92a7e4095.unity3d
+    path: Assets/SetRole/Sources/UI/sexSelect/boy.jpg
+  - bundle: 14bc6672550381e20fe3dd80895f7b75.unity3d
+    path: Assets/SetRole/Sources/UI/sexSelect/girl.jpg
+  ruleBundles:
+  - name: 5e19acf83e8cf5bcd5322469431f5a33.unity3d
+    assets:
+    - Assets/Resources/Scenes/DemoChildScene.unity
+    - Assets/Resources/Scenes/DemoScene.unity
+  - name: f8353825895170d7695ae7d2f3389fa3.unity3d
+    assets:
+    - Assets/FriendSystem/Json.json
+  - name: 1edc91f7770e7a985113bbf01eb1a285.unity3d
+    assets:
+    - "Assets/FriendSystem/Font/7000\u5E38\u7528\u5B57.txt"
+    - Assets/FriendSystem/Font/OPPOSans-Bold.ttf
+    - Assets/FriendSystem/Font/OPPOSans-Medium.ttf
+    - Assets/FriendSystem/Font/SIMYOU SDF.asset
+    - Assets/FriendSystem/Font/SIMYOU.TTF
+  - name: e98dee5aa69e5a360c0f03b5d2d3c1f5.unity3d
+    assets:
+    - Assets/FriendSystem/Prefabs/FriendSystemCanvas.prefab
+  - name: a30cab2bca684bbcdaf2a9d604b1f42a.unity3d
+    assets:
+    - Assets/FriendSystem/Scenes/FriendScene.unity
+    - Assets/FriendSystem/Scenes/TestScene.unity
+  - name: 903bf7bc62e30daf1b67c5656deff678.unity3d
+    assets:
+    - Assets/FriendSystem/Texture/C_3.jpg
+    - Assets/FriendSystem/Texture/Plane.mat
+  - name: a3c919bd1191cd9f05ec59a8686e645f.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.1.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.2.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.3.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.4.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.5.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53551.6.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.1.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.2.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.3.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.4.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53552.5.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.1.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.2.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.3.jpg"
+    - "Assets/FriendSystem/Image/\u56FE\u7247\u5C55\u793A/\u597D\u53CB\u540D\u53553.4.jpg"
+  - name: 2d8268e959d50ba0ac54af0195aa1482.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/\u5934\u50CF/\u8868\u60C5\u7ED8\u753B.asset"
+    - "Assets/FriendSystem/Image/\u5934\u50CF/\u8868\u60C5\u7ED8\u753B.png"
+  - name: ef1c416cc920286a0cbb6b450f657baf.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/\u8868\u60C5/Emoji.asset"
+    - "Assets/FriendSystem/Image/\u8868\u60C5/Emoji.png"
+  - name: c384ce4f5ecf166e9ebc02b2cbe6c953.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/12\u5C0F\u4EBA-08.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u4E09\u89D2\u5F62
+      1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u52FE\u9009.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u53D6\u6D88 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u53D6\u6D88.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u56FE\u5C42 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u56FE\u5C42 15.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5706\u89D2\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5BF9\u52FE.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u5F62\u72B6 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6210\u5458.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6807\u7B7E.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1-5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 2-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 2-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 2-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 3-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 3-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 4
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 5-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 5-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 6-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 6-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 7
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 7.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u692D\u5706 8.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6DFB\u52A0\u597D\u53CB.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u6E10\u53D8\u586B\u5145
+      4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u76F4\u7EBF 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u76F4\u7EBF 3
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 10.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 11-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 11-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 11.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 12.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 13.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 15
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 15.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 16
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 16
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 16.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 17
+      \u62F7\u8D1D-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 17
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 17.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2
+      \u62F7\u8D1D 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2
+      \u62F7\u8D1D 15.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2
+      \u62F7\u8D1D 16.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5-5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 7
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 7
+      \u62F7\u8D1D 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 7
+      \u62F7\u8D1D 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 7
+      \u62F7\u8D1D 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 7.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 8.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u77E9\u5F62 9.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u804A\u5929.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u8868\u60C5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u8868\u60C5\u5305.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u9009\u62E9\u9AD8\u4EAE.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE1/\u9519\u8BEF.png"
+  - name: b3a03e015fd65d9e9a6b7727f10a4b37.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/toggle\u5706\u89D2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u52FE\u9009.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u53D6\u6D88-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u53D6\u6D88.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42 13.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42 16.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42 17.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u56FE\u5C42 21.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5706\u89D2\u77E9\u5F62
+      2 \u62F7\u8D1D 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5706\u89D2\u77E9\u5F62
+      2 \u62F7\u8D1D 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u597D\u53CB\u540D\u5355.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u5F62\u72B6 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6210\u5458.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 1-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 2-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 4
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 4
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u692D\u5706 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6DFB\u52A0\u597D\u53CB.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u6E10\u53D8\u586B\u5145
+      4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u76F4\u7EBF 3
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 10-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 10.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11
+      \u62F7\u8D1D 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11
+      \u62F7\u8D1D 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11
+      \u62F7\u8D1D 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 11.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 17
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 17.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 2
+      \u62F7\u8D1D 16.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 5-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 5-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 5-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 7
+      \u62F7\u8D1D 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 7
+      \u62F7\u8D1D 6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 7
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 7-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 7.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE2/\u77E9\u5F62 9.png"
+  - name: a336685641e3ed99f6f13061a5f3fa48.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u4E09\u89D2\u5F62
+      1 \u62F7\u8D1D 5-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u4E09\u89D2\u5F62
+      1 \u62F7\u8D1D 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5220\u9664 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5220\u9664.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u53D6\u6D88.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 13.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 20.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 21.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 22.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 23.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 24.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 25
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 25.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 26.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 27
+      \u62F7\u8D1D-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 27
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 27.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 28.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u56FE\u5C42 29.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5706\u89D2\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u589E\u52A0\u6DFB\u52A0\u52A0\u53F7.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5934\u50CF \u7537\u5B69.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u5F62\u72B6 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6210\u5458.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6807\u7B7E.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 2-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3
+      \u62F7\u8D1D 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3
+      \u62F7\u8D1D-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 4
+      \u62F7\u8D1D 3-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 4
+      \u62F7\u8D1D 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u692D\u5706 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6DFB\u52A0\u597D\u53CB.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u6E10\u53D8\u586B\u5145
+      4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D 3-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D 3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u76F4\u7EBF 3
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 10-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 10-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 10.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 11-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 11.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 12
+      \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 12
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 12.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 14.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 15.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16-5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2
+      \u62F7\u8D1D 16.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 4-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 5-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 5-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 5-3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 5-4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7
+      \u62F7\u8D1D 5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7
+      \u62F7\u8D1D-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7
+      \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 7.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 9-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 9-2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u77E9\u5F62 9.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u7F16\u8F91 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/png\u5207\u56FE3/\u7F16\u8F91.png"
+  - name: ca887ae98546f35b5f4a70ef9c89be91.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      5.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u56FE\u5C42
+      6.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u6846.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u76F4\u7EBF
+      2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      1 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D 2-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D 2.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      3.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4 \u62F7\u8D1D.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4-1.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u77E9\u5F62
+      4.png"
+    - "Assets/FriendSystem/Image/png\u5207\u56FE/\u8868\u60C5\u5207\u56FE/\u80CC\u666F.png"
+  - name: 7ebc8232e74600a917ddc0c0257b4bc8.unity3d
+    assets:
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/IconMask.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u5927\u53C9.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u5927\u53C9icon.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/top\u6587\u5B57.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0A\u4F20.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0A\u4F20\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6587\u5B57.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6587\u5B57\u6700\u5E95\u4E0B.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u79FB\u52A8\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934icon.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4E0A.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4E0B.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u7BAD\u5934\u4EA4\u4E92.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4E0B\u62C9\u9009\u4E2D\u77E9\u5F62.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4FDD\u5B58.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u4FDD\u5B58\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u53D6\u6D88.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u53D6\u6D88\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF
+      \u5973\u5B69.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF
+      \u7537\u5B69.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5934\u50CF.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u5B66\u6821.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6027\u522B\u4E0B\u62C9\u7BAD\u5934.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u641C\u7D22icon.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6559\u80B2\u5386\u7A0B.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6559\u80B2\u5386\u7A0B\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589E.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589Eicon.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u65B0\u589E\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6635\u79F0.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6635\u79F0\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0\u5927\u5B66.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u6DFB\u52A0\u5B66\u6821.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u70B9\u51FB\u4FEE\u6539.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u70B9\u51FB\u4FEE\u6539\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u76F4\u7EBF.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u7F16\u8F91.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u7F16\u8F91icon.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666Ftop.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666F\u5927\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u80CC\u666F\u6846.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u8BF7\u9009\u62E9\u5B66\u6821.png"
+    - "Assets/FriendSystem/Image/\u4E2A\u4EBA\u4E2D\u5FC3/\u7D20\u6750/\u9009\u62E9\u5B66\u6821\u6846.png"
+  - name: a57f8494204dfe642653c007d458180b.unity3d
+    assets:
+    - Assets/SetRole/Animators/PlayerAni.controller
+  - name: efa075478d453563b8850f009ef826b7.unity3d
+    assets:
+    - Assets/SetRole/Font/OPPOSANS-BOLD.TTF
+  - name: 478d0728934bd3ad491aa79f722111c8.unity3d
+    assets:
+    - Assets/SetRole/Font/OPPOSANS-MEDIUM.TTF
+  - name: 308f69444748a8056dcd40c3c416e14f.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Basic Motions - Scene.unity
+  - name: 7a1b14af9708feee7b3e2f7625562423.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Button Round Foreground.png
+  - name: f638b5a04d9b6236ab81b76eeabd0669.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/frame - 1.png
+  - name: ec3d4e699e49d810353f267f721a7a43.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Ok.png
+  - name: 106602462e5d447471a4e7322ce32c18.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/tab - normal.png
+  - name: 5af128c627c4cbcc0cb82ebeca4f70ee.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/tab - selected.png
+  - name: c8074054b1912ab0db8a013bcc97f58d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Tab.png
+  - name: 95ac6cb026f6d12fe78d7952fe1998c2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Thumb.png
+  - name: 03b5ad2674c6e31f4f28dfd1f6a59a06.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Window Frame.png
+  - name: fa47dbdbc3e91f06215920ab12a1819e.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Window.png
+  - name: 0ec842c4aa3e25f1e22eb9a67bbe1003.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Fall.controller
+  - name: b7287604cd93ed6cf375fe4d96c13499.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Idle.controller
+  - name: 17780237bc5a9df2fc360f8469905668.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Jump.controller
+  - name: 9f91822974905496deb1b908cfbf0308.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Run.controller
+  - name: 486c5460125d15829d4de7de4bbc9c6d.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Sprint.controller
+  - name: c231539aefe09036bec98dc811082ebe.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Strafe.controller
+  - name: 06074eec099d973fcfc6e32ec2652249.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Talk.controller
+  - name: e02df004440e930a3b0a9ae169bb85e3.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/AnimationControllers/BasicMotions@Walk.controller
+  - name: 392979cfc0e96bb3a15d9a404084a1bd.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Materials/BasicMotionsFloor.mat
+  - name: 87a55c980e956f8ca7851ff7470af2c0.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Materials/BasicMotionsMaterial.mat
+  - name: b7be471107ffe786a4be24bdf9fcf0c4.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Prefabs/BasicMotionsDummy.prefab
+  - name: d155bc5a850168cd3f5f96e3c576cbda.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Textures/BasicMotionsTexture.png
+  - name: bc677275bffb3805bdd76f9298c98c59.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/01.png
+  - name: fcb9d3b8bff099605d46f428ed0599ac.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/02.png
+  - name: 4b4480ce9eacb9dd09751164c0d07868.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/03.png
+  - name: e997e10a6e3007f080adcf2186a915dd.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/04.png
+  - name: 5f521561943e77b13e081c20cdcedd2c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/05.png
+  - name: 908964c95a12561d534b2500d777e164.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/06.png
+  - name: 466775bf0de93e1f1d2758769c841835.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/07.png
+  - name: 69301ab9a703e5fff06ca2e1cfbc17e0.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/08.png
+  - name: c3b6d9d3ad426aa348d83211f3ea90aa.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/09.png
+  - name: 3374fb3ceb98fa0cd98ddfad45b313b7.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/10.png
+  - name: c2536888d98c422b75f0cd45d6119a2e.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/11.png
+  - name: 24f9fbdc2b41da136994b575602b037b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/12.png
+  - name: e953a2f38cb65a1b874656535e977e3d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/13.png
+  - name: 4044d84060b492abcedc9dfbc83036c9.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/14.png
+  - name: 003c7675e80fb273cc04272b9facb4d6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/15.png
+  - name: 6c6d6700dd9bb929d05fe9872bb1c5e8.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/16.png
+  - name: 343898a05dcfdb0eb58c4d564ae69331.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/17.png
+  - name: 8141d8e51cbd9ff804f0df2252d69516.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/18.png
+  - name: 5f2ac83147d25139bc1ca56bdac2e4bd.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/19.png
+  - name: 1c3f473d09baafa61c257867a83d4c33.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/20.png
+  - name: 0231e04532be530a2478643a19ad065b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/21.png
+  - name: ed98ab760a0cdbad61ecbd02dc50ab1d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/22.png
+  - name: 36c1b25383994fc92e400263dbd04b24.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/23.png
+  - name: 4f070ff4f56b555eb07707b724c6d5e0.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/24.png
+  - name: 002399bd9510c8e612431579945bc66f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/25.png
+  - name: dba5801c27f471a0f6563fd9080f901a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/26.png
+  - name: 11787ae94a121057bc222a40db09836f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/27.png
+  - name: 83407fc7deeaa1adbf95d5268e967f3a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/28.png
+  - name: 136d5516fef06c7379cd48fec48aafa6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Sprite/Exhibitionhall/29.png
+  - name: d3209c2514a4d8bff92e92e92a7e4095.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/sexSelect/boy.jpg
+  - name: 14bc6672550381e20fe3dd80895f7b75.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/sexSelect/girl.jpg
+  - name: 5857e37156be882241100ed5423d2a15.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/prefabs/env.prefab
+  - name: a6ca1e1a77ad335f13a1dc7273050a02.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/prefabs/shoes-1.prefab
+  - name: db7e5f3ff51c1ad4966cffb48699a639.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/Glow/GlowEffectDownsample.shader
+  - name: 5938540555191a00d527eb6ca56fadda.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/MirrorReflection/MirrorReflection.shader
+  - name: 5b1ccca1dd2176c0db5f5028cd5ac808.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/eyes/eyes_blue.jpg
+  - name: 579efaa385634c6d01a028ef61b5b97e.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/eyes/eyes_brown.jpg
+  - name: 8dbbfde9116b89be381b6795e5bf5759.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/eyes/eyes_green.jpg
+  - name: eaada166c86b06188e3ee985d5a3efc2.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_blond.jpg
+  - name: c36ab4d57a33cd11ba882c6a24519d17.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_blond1.jpg
+  - name: 8adbeef70a660868e0428f365df549f6.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_brown.jpg
+  - name: 30842b88e5d2e07dfdbd97407b27cec7.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_brown1.jpg
+  - name: 0f5f1dd0580a587ac0c6b6b4c11345d1.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_orange.jpg
+  - name: 3ce6d4220079b0b86a5b7b5b1f984246.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/hair/hair_orange1.jpg
+  - name: ec06298541c9cd29a4ad60dbf8cad0dc.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_blue.jpg
+  - name: 712775cc47e4ea1910a5719f433e5010.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_blue1.jpg
+  - name: 3f5a771253ccfab93911aa98b33da998.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_dark.jpg
+  - name: 212cfb27aed4b6df8650b01d2d77c5f4.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_green.jpg
+  - name: e24dda4e9e2dd80e6d064bc3b2e07f50.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_lillac.jpg
+  - name: 4d59d2b23def0984e1cb8f09b89cd653.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/pants/pants_purple.jpg
+  - name: e8adb22b40e5a4c6788db8a1911d8cee.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_black.jpg
+  - name: c8d9260cd1157e7fc664edf6e310e3a4.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_brown .jpg
+  - name: 2cb1cf314dcde545fea3c80b9f07a290.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_dark.jpg
+  - name: 08d38b459e9ce0638866394d7aa797ee.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_green.jpg
+  - name: cc930cea83d807af1096c52ea467226f.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_red1.jpg
+  - name: 3ece897422c9279e94f64f8592adc80d.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/shoes/shoes_red2.jpg
+  - name: e6f831adba36682b6f7fac7e46587173.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_blue.jpg
+  - name: c4f1fddfbb8e688e2f1331fbb8240027.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_gray.jpg
+  - name: cc1bf4806c48f7f936ddc924db46b5ca.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_green.jpg
+  - name: 1e85a13b6e2a229cf1e8faad8ad32aa6.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_orange.jpg
+  - name: 4894bcbc5ddc38e143b0d983774a252d.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_pink.jpg
+  - name: d79dfec4de0ba52011ec0134d8c3c9e0.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/boy/top/top_yellow.jpg
+  - name: 9a82e2a4aa0f7aa6dd21fe1c4af89d4a.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/eyes/eyes_blue.jpg
+  - name: ea00630780d0286752c193b261fc3360.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/eyes/eyes_brown.jpg
+  - name: ea77d14ac3488a822b930cace008435c.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/eyes/eyes_green.jpg
+  - name: 5129fe5cbfb23a9acf41600ea0b3209f.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_brown.jpg
+  - name: 9ea2b26533feb9bd9d06daf1b1cc91ba.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_cyan.jpg
+  - name: 6b1f7b1f2477b2e25bfdfae2441b7d1b.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_dark.jpg
+  - name: 41bf8e147ff1ac86ddf9a218822d3605.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_pink.jpg
+  - name: a6e1a82dea6212365bb8b5e416788384.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_red.jpg
+  - name: d6dd70fa9d1abddae3c51f2457585996.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/hair/hair_yellow.jpg
+  - name: f13ab060061af1768216b7c8a631043f.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_black.jpg
+  - name: d17642836d8011d3ca5dddcadce245a2.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_blue.jpg
+  - name: 0125d0cb27a66d744709b00da60c54ef.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_blue1.jpg
+  - name: d57f4866951fc48876c9e18487a84efd.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_dark.jpg
+  - name: b3dd01a45cc104a15cbef47a643a13d5.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_green.jpg
+  - name: 48f631ddb2e47376a133b318a5ce7091.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/pants/pants_orange.jpg
+  - name: baf9bd83f76b028033826065225f8557.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_blue.jpg
+  - name: 107a57ef6cddc1887ee2466148dc814a.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_blue1.jpg
+  - name: c83d84ea23cc8f9568408f61d72da789.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_green.jpg
+  - name: 7143abe066d3955ea26ab56752d67d6f.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_red.jpg
+  - name: 818601ccdb89d81e15c9249b0746a539.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_yellow.jpg
+  - name: f2685a2fe8d4c683622aa94496ffe243.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/shoes/shoes_yellow1.jpg
+  - name: 1d9537880342c752763c3d6570b56e36.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_blue.jpg
+  - name: 06326eaf64bcca386933d1d1cfbb8f40.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_green.jpg
+  - name: 75188dc51986c1d5c751aa7d0aeae7bd.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_green2.jpg
+  - name: 6370b1ebfcd7949756cad6d49d2c7b7b.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_orange.jpg
+  - name: adc371bad891b20a4f72b432ebe3f3e1.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_pink.jpg
+  - name: d40cc51d3100a725e23dfbcc1912a465.unity3d
+    assets:
+    - Assets/SetRole/Sources/UI/girl/top/top_purple.jpg
+  - name: 953898f8d6014e05a05099a726568c6c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_blue.mat
+  - name: df93ac2aa2e7a9d1176719dcdcf1b22f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_brown.mat
+  - name: f255ae8dd772dcd47ce88c197fb1e57d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_eyes_green.mat
+  - name: 4f2a70cdb9ce5b976d32268f92395c02.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_face-1.mat
+  - name: a4d5c396fa315a4f8091cda176dedafe.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_face-2.mat
+  - name: 6643cf0c6891b0105d3dceae4994027c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_brown.mat
+  - name: b4869284d4169ebce66fc7321b0de4f8.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_red.mat
+  - name: 18c9a84c1ead255a8784985274fac59c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-1_yellow.mat
+  - name: 639e812567d6e9bdb8a78be97a238246.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_cyan.mat
+  - name: 2cea248fca0101e6e0d625173a5103d6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_dark.mat
+  - name: 9dbf3c0f5ae5a9855807a81204a567ab.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_hair-2_pink.mat
+  - name: dd7f0f073243aedf36d99307f6d64e49.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_blue.mat
+  - name: a5f11c8888b440dfd36685dc7465f6bb.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_dark.mat
+  - name: 4e8fb13691d7f227544d0704ad545e79.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-1_green.mat
+  - name: 957d38ddb04473384d891047d61c7ad2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_black.mat
+  - name: 36ce39c98249a20e01e676f91773b9eb.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_blue.mat
+  - name: ff65d9906ca05bd84325b94f20678427.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_pants-2_orange.mat
+  - name: 01d9be322f58f7ac305c5e2aa52d12b5.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_blue.mat
+  - name: 9894e7b0da58b47e12ea2d8f156eebd1.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_green.mat
+  - name: 0099f522d3e8a7c05faf84bfa2baee4f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-1_yellow.mat
+  - name: fc81df10699d9a4f4a762f4598d6bbfc.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_blue.mat
+  - name: d4fd95c3552217cc653d3c9e76457b4f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_red.mat
+  - name: 7b13b2b89fcbdd9beaf14cd3556acf3c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_shoes-2_yellow.mat
+  - name: 8715e08bb6afac794ed2d87b1959c2ec.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_blue.mat
+  - name: 07f7d015b12ed010dc63d397fc50487a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_green.mat
+  - name: 83998c537e23627b9bdd61047c50b01b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-1_pink.mat
+  - name: 09e6f808936a6519ea60a8f2e67dbf9c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_green.mat
+  - name: 7381bd5ac302460eeffc33191197dcf2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_orange.mat
+  - name: fe1785985503217969c791ec96b1e23d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/Per Texture Materials/female_top-2_purple.mat
+  - name: 336245cb277d0f4cf70d37f55011fd84.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_blue.tga
+  - name: 026b95a9b9afb416699dda6985289519.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_brown.tga
+  - name: 9e9451abaa3fb13ebe1ee8a9eb7442e2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_eyes_green.tga
+  - name: cd608ef532aff563eafd65d34f1bc7c0.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_face-1.tga
+  - name: 5b3b59ae1ffab305a97f7933ee15a345.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_face-1_normal.tga
+  - name: 0e9b87b91916cbc8c031ee8b4ef72576.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_face-2.tga
+  - name: 5d2fa6a14e731c3c91d37900da671058.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_face-2_normal.tga
+  - name: a0a2fdf8e3b77f30e0b1145723869610.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_brown.tga
+  - name: 61dfea38df9eeefd8d072037ed7e1bfb.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_normal.tga
+  - name: ba1908318c70b728425e9ce55ddc5cd3.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_red.tga
+  - name: 53bf6e575500d0b886b92d6d5f0730c4.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-1_yellow.tga
+  - name: c0654e826feed41f95e2d5b0028a3f97.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_cyan.tga
+  - name: 820f8e1e1392d72631c98d153d49e902.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_dark.tga
+  - name: 9894ef169329037e805b7e04998d42be.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_hair-2_pink.tga
+  - name: 76845f4015613da1140701e66f908f36.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_blue.tga
+  - name: 5efd8b20eea2b953c194acce71a369f6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_dark.tga
+  - name: ce6aa6453d575a92fc76f2e8d081e6b7.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_green.tga
+  - name: 516ac6bae401675606fb8d65dc2367cb.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-1_normal.tga
+  - name: 2748bd2d28d84b0b7e71070746562718.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_black.tga
+  - name: 1e4cb02aebbc7507b7f818a7181fa20c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_blue.tga
+  - name: c8456a1c853327087b2cd74e45649d05.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_normal.tga
+  - name: 5aaf86afb06564b6f7a06e46ae1d7eae.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_pants-2_orange.tga
+  - name: c9b861ca987fe0183b1e99409d8fee61.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_blue.tga
+  - name: fc447fd8da0611f356da2a694ced3fa1.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_green.tga
+  - name: aa11f283410bc258548c0590933e85e2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_normal.tga
+  - name: 4ea0c729c0d4285ada4cbbcf9f6a2036.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-1_yellow.tga
+  - name: 9b54c9c4c126ade72a5b53830c2146c7.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_blue.tga
+  - name: 954c6100c2effceb2db6831a5d9a089c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_normal.tga
+  - name: 756f3fd47c39fab5ef7d93d58de8dfdb.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_red.tga
+  - name: 15aa58c7fbfce6729d29aa0d07b3500b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_shoes-2_yellow.tga
+  - name: e5daa62ae068c04ffb4de270e12bf70b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_blue.tga
+  - name: 9335a0ef7de272918a8ea3331e83c9f9.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_green.tga
+  - name: 0fdcc95e1f7fd870f75aa89c4285ec15.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_normal.tga
+  - name: 6c336f69406e831ec5e305828986f409.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-1_pink.tga
+  - name: eb940c97ada5c606e7b946677025cdc4.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_green.tga
+  - name: 549d385f1a12781c5e9e544f428fb547.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_normal.tga
+  - name: f107e407aaf35bada0abea6675251351.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_orange.tga
+  - name: fcf1c71e7f68d68cb8a53d5abe0f7865.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Female/textures/female_top-2_purple.tga
+  - name: 799119bcd2f17792764a6c54d86518a2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_blue.mat
+  - name: 4c00aaf4c8e19c40aaa0ae3bb3de795e.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_brown.mat
+  - name: 5bd05f5db351fa3aacdf01bb240d4e1e.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_eyes_green.mat
+  - name: 259c8eb2f142c403c3198bc8a1a3d6df.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_face-1.mat
+  - name: a5c510adc2800c21c15dfd6e71f7835a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_face-2.mat
+  - name: bfdb34aa66b3ceb9d3cb34e4e2faea16.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_blond.mat
+  - name: 6b82bccc5f94a7f58d1709578cc3b03b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_brown.mat
+  - name: e92601378bc89ab0fd2e40345f997fe6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-1_orange.mat
+  - name: c5203c2cc4a78833b52f25b66ca95b14.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_blond.mat
+  - name: 76eb741b6aa49f242818730f56ac97d1.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_brown.mat
+  - name: dde73066e3a5398640774ece4b4bc433.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_hair-2_red.mat
+  - name: 4613543fb1d68a049930a0c4ef371171.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_blue.mat
+  - name: b08a6b3d57e205261dda1c0a8deff110.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_dark.mat
+  - name: f565e3bf598f7e2824d2e275b992199c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-1_green.mat
+  - name: 6812adab1333bb03b7b1d37de922f3a2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_blue.mat
+  - name: 4545f963ca613f609bb9f1e94e7558ca.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_lillac.mat
+  - name: 8fa3de11ed0907e5e4f5827edca6fc9a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_pants-2_purple.mat
+  - name: ecd1890d4546af513ac7754514014cc4.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_black.mat
+  - name: 1aff985a0af14893d0ee8a0e2e48b0a5.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_green.mat
+  - name: ffd95afff99bd21ac7715a5e98ffb273.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-1_red.mat
+  - name: 09ad1263ee9e3cff9276f8c8c5dfac63.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_brown.mat
+  - name: c51edc2742ab8d56996ab4d387ebe5ef.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_dark.mat
+  - name: b0b838f0f7d2317cd2a86e8f2cf2cf8f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_shoes-2_red.mat
+  - name: b863a9bc7968220cfba7a0931ac75be9.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_blue.mat
+  - name: a2301db0751c794e33651bd704ff1369.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_pink.mat
+  - name: e7fd27323fd1a2665d6afa8d3f5cf641.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-1_yellow.mat
+  - name: e6c617338fe4459dc84c4e19504f9064.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_gray.mat
+  - name: 1e0dd06af7c242d3a8dc02f64d30fe28.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_green.mat
+  - name: 4e4775780f3d4556f985ca0adaf59b67.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/Per Texture Materials/male_top-2_orange.mat
+  - name: 111ad172bfa690a60290cdfd87b182a8.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_blue.tga
+  - name: 06309fe95b4230f7cd8eceb3b26fca50.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_brown.tga
+  - name: 7b8184bed29907d46af9fab8d745661d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_eyes_green.tga
+  - name: f2228bf4f0010296ad2b4e6ef3774517.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_face-1.tga
+  - name: b601929eae54b6fe1b8ccf5c06d17a5e.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_face-1_normal.tga
+  - name: 59643c19cb5a6ccdc256d8557eb11e03.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_face-2.tga
+  - name: e7530b406bebca20603b63159808feae.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_face-2_normal.tga
+  - name: b41baec88385dadac97c174df6aba372.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_blond.tga
+  - name: cbfc9e664744c278369d59e745acc77b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_brown.tga
+  - name: 8048a48fcafe9f33aa96ba585fdeae89.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_normal.tga
+  - name: c9109b3effee4d7ab5e66e1001db1edf.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-1_orange.tga
+  - name: f47172a4717bfa21913b38332f160d62.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_blond.tga
+  - name: d9cfd6e546cd498f8d2a9064df8517a3.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_brown.tga
+  - name: 0c40ea4bf4bdbb14af64bdde73493cde.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_normal.tga
+  - name: 0252c0fe7c5c184ed6cb824910ec1749.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_hair-2_red.tga
+  - name: 6bf7d330f806cf260d11ea7430176354.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_blue.tga
+  - name: fc113fd5681cc56014ee4b75ab7cf320.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_dark.tga
+  - name: 0a3f5058c3b73d2f1c83ec3c69b8f6a6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_green.tga
+  - name: 184c5121754b261029278b11fa6d157f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-1_normal.tga
+  - name: 0d9cf4519cf88f15487fe5919b41b233.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_blue.tga
+  - name: 4da696c47f2a4bab2fdc543a9935a2d9.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_lillac.tga
+  - name: 3b8b71659f2c750d16c654f424d85087.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_normal.tga
+  - name: 8ba514db671d07fe5c58f3bd7bdd10bd.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_pants-2_purple.tga
+  - name: d7349b3cddb15d3c09113d308d993f61.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_black.tga
+  - name: dc8c84b7e0c4b7d115b5d8ea60b330e0.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_green.tga
+  - name: aede6133850a8eb117c9ab80e1b3f32d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_normal.tga
+  - name: ba8b35756b87333f1a218b6f454a58bd.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-1_red.tga
+  - name: cf072a5ed6cc8d3cc325e3cdaab2d7ec.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_brown.tga
+  - name: f8e4a3046523bac3c1b55b0cf6717473.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_dark.tga
+  - name: 92b825f12a752db7a296fff7da9a05db.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_normal.tga
+  - name: 8dbbb9f6ab28297919b09e87b3505b77.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_shoes-2_red.tga
+  - name: 8ed709d73256a6c0d63667df14f9ef9c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_blue.tga
+  - name: b9d0e2d16dce5dac52184034e65099a2.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_normal.tga
+  - name: cd00a29ea3dd56db9d0635bd17a5e5b6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_pink.tga
+  - name: 50a8df489cc82a60315468070165ae0f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-1_yellow.tga
+  - name: 49d3c62995d547b3935c478a169fdb36.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_gray.tga
+  - name: 877600e6593beb5f259f66d9da170821.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_green.tga
+  - name: d8b7225e162b296cdfc0be649c046628.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_normal.tga
+  - name: 81fc022e1890f9d458fee5e27c29e35d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/characters/Male/textures/male_top-2_orange.tga
+  - name: 72635f462792025a86574de5fcf675e3.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/artplant_poster.mat
+  - name: 0da2ac9af90938eeaa817ba4e55679f0.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/black_wood.mat
+  - name: 1d9d58a37a8dcbe97d5a15e18a3075b4.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/carpet.mat
+  - name: 9d9fad6d4ccd0f72c34858d1d10b26a6.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/dressing_room-metal.mat
+  - name: a9d6a829ea69bef5bd77edfcb8ed093d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/dressing_room-mirror.mat
+  - name: 0c79006a71aa2252368c6991763a9cfc.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/floor_wood.mat
+  - name: 929ec82843109ff3d5f4096187cae55a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/hanging_clothes.mat
+  - name: 27c1ba62d720195ec8e7a5dfcd4c3269.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/roof.mat
+  - name: b89e7f903d5a8397a2de83cacbadb52a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/unity_poster.mat
+  - name: 675c491bb20740ad49ce1d6b35d8da6f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/wallpaper.mat
+  - name: 2da031d19fdde57f3c604c56dd377026.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/Materials/wall_plank.mat
+  - name: 752456fb9fc547dc7f3499990d74620f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/artplant_poster.tga
+  - name: 4361114af7fbd32e6b50b11f111e5c5c.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/black_wood.tga
+  - name: 5c91c8330ed5f356fd95eeb43adc6261.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/carpet.tga
+  - name: 7e9bc1e18b49a888ff2acf776e9dde60.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/carpetLightingMap.tga
+  - name: 14b6d6886ba5a2ede47ee70a535bd715.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_x12.tga
+  - name: d7dc917295f93d672fa912d4d9eddd7d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_y1.tga
+  - name: 77a549d7670c4860b43d56428ff7f21d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/cubemap_y2.tga
+  - name: e4e5fe46ae3e38978455c7037a209a6d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/floor_wood.tga
+  - name: ac1e6bd7a6140537fda9b3935d8a347b.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/hanging_clothes.tga
+  - name: 02748ffc54cdb5c06c678126122e982d.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/New Cubemap.cubemap
+  - name: 862b6b361a0732b187ac99c18f8fe96f.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/roof.tga
+  - name: 9421ea3e3ed5c2d90df4586766e8be20.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/roomLightingMap.tga
+  - name: 801c17d968cfadd61949249289f571de.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/unity_poster.tga
+  - name: 41126aa9bc08e3aaaa9fdcd51da1402a.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/wallpaper.tga
+  - name: 2d0c2eaeb1817b6d5d206fba5ded1a29.unity3d
+    assets:
+    - Assets/SetRole/Sources/Character/Env/dressing_room/textures/wall_plank.tga
+  - name: 1aa355706e1767666124331a716c7890.unity3d
+    assets:
+    - Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+  - name: 24b1268c512217e7342a6c4d3a623d2f.unity3d
+    assets:
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/TMPChineseFont.asset
+  - name: a76a981e77391907c495cb3e89f9c50c.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Walk01.fbx
+  - name: 92a5d9904f54c40c243af32161014a38.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Run01.fbx
+  - name: 88f44ef8ccfb848c0e632d7d87d972af.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Models/BasicMotionsDummyModel.fbx
+  - name: 0cd38e1b13ebb947e73837a284804dd2.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Idles/BasicMotions@Idle01.fbx
+  - name: b30c6ecdbe4d0056e681f0b1b8118931.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Fall01.fbx
+  - name: 09aaabb924dd31f32f03da97b1bcae63.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Idles/BasicMotions@Idle02.fbx
+  - name: 69a69fc9dea040f7f5734edeedbf69f4.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Jump01.fbx
+  - name: 06c76ea5f9474f7c23990e060f09bd90.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Sprint01.fbx
+  - name: e427ec14b4925d175b6131632d346401.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Movement/BasicMotions@Strafe01.fbx
+  - name: 0995eb1e1324bc680724f5de33046695.unity3d
+    assets:
+    - Assets/SetRole/Kevin Iglesias/Basic Motions/Animations/Social/Conversation/BasicMotions@Talk01.fbx

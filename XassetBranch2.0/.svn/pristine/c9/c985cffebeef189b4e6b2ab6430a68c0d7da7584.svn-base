@@ -1,0 +1,97 @@
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace FriendSystem
+{
+    public class EditFriendTagPrefab : MonoBehaviour
+    {
+        [SerializeField] Text tagName;
+        [SerializeField] Text studentNameList;
+        [SerializeField] Button editBtn;
+        [SerializeField] Button deleteBtn;
+        [SerializeField] PopUpTagWindow popUp;
+
+        new MyTag tag;
+        List<string> chatNos = new List<string>();
+        private void Start()
+        {
+            editBtn.onClick.AddListener(OnEditClick);
+            deleteBtn.onClick.AddListener(OnDeleteClick);
+        }
+        /// <summary>
+        /// 点击删除 标签
+        /// </summary>
+        private void OnDeleteClick()
+        {
+            InfoHandle.DelTag(tag.labelId, (json)=>
+            {
+                gameObject.SetActive(false);
+                GoodFriendManager.getInstance.myTags.Remove(tag);
+            });
+        }
+        /// <summary>
+        /// 点击编辑 标签
+        /// </summary>
+        private void OnEditClick()
+        {
+            popUp.ShowAddTagWindow(tag, chatNos);
+        }
+        private void OnEnable()
+        {
+            // 初始化 标签下的 所有 同学 信息
+            StartCoroutine(Refresh());
+            
+        }
+        private IEnumerator Refresh()
+        {
+            while(true)
+            {
+                yield return null;
+                InfoHandle.GetStudentsByTag(tag.labelId, OnResponse);
+                yield return new WaitForSecondsRealtime(GoodFriendManager.getInstance.requestTime);
+            }
+        }
+        private void OnDisable()
+        {
+            gameObject.SetActive(false);
+        }
+        public void Show(MyTag tag)
+        {
+            chatNos.Clear();
+            this.tag = tag;
+            tagName.text = tag.name;
+            gameObject.SetActive(true);
+            editBtn.interactable = false;
+            deleteBtn.interactable = false;
+        }
+        private void OnResponse(string json)
+        {
+            //Debug.Log($"获取{tag.name} 下的 学生:"+json);
+            tagName.text = tag.name;
+            JObject obj = (JObject)JsonConvert.DeserializeObject(json);
+            string msg = (string)obj["msg"];
+            int code = (int)obj["code"];
+            JArray dataJson = (JArray)obj["data"];
+            string tagStr = "";
+            chatNos.Clear();
+            if (code == 200 && dataJson.Count > 0)
+            {
+                editBtn.interactable = true;
+                deleteBtn.interactable = true;
+                string jsonStr = dataJson[0]["students"].ToString();
+                var tags = JsonConvert.DeserializeObject<List<TagFriend>>(jsonStr);
+                foreach (var item in tags)
+                {
+                    chatNos.Add(item.chatNo);
+                    tagStr += item.nickName + "    ";
+                }
+            }
+            studentNameList.text = tagStr;
+        }
+    }
+}

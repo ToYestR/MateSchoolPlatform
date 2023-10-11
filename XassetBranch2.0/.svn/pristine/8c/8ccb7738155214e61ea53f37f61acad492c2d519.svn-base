@@ -1,0 +1,69 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using FriendSystem;
+using UnityEngine.SceneManagement;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using libx;
+namespace XAsset
+{
+    /// <summary>
+    /// 主 UI Canvas
+    /// </summary>
+    public class TestCanvas : MonoBehaviour
+    {
+        [SerializeField] Button openFriendPanel;
+        [SerializeField] Button openPersonalPanel;
+        [SerializeField] Button exitButton;
+
+        private void Start()
+        {
+            openFriendPanel.onClick.AddListener(GoodFriendManager.getInstance.Show);
+            openPersonalPanel.onClick.AddListener(PersonalCenter.getInstance.Show);
+            exitButton.onClick.AddListener(()=> {/*FriendSystemCanvas.getInstance.Destroy()*/; SceneManager.LoadScene(1); });//返回个人空间
+        }
+        public void Return()
+        {
+            if(Global.currentchildsceneid!="")
+            {
+                if(Global.currentseneid!="")
+                {
+                    EnterScene();
+                }
+                else
+                {
+                    SceneManager.LoadScene(1);
+                }
+                Global.currentchildsceneid = "";
+            }
+            else
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
+        public void EnterScene()
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("Authorization", Global.token);
+            JObject jobjects = new JObject();
+            jobjects["id"] = Global.currentseneid;
+            WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_GetScenePackageInfo), jobjects.ToString(), headers, GetScenePackageInfoHandle);
+        }
+        /// <summary>
+        /// 响应单个场景详细信息
+        /// </summary>
+        /// <param name="result"></param>
+        public void GetScenePackageInfoHandle(string result)
+        {
+            Debug.Log(result);
+            //m_Loadingpanel.SetActive(true);
+            JObject jobject = JsonConvert.DeserializeObject<JObject>(result);
+            string mainscene = jobject["data"]["unityResourcePath"].ToString();
+            string path = jobject["data"]["ossParentPath"].ToString();
+            string id = jobject["data"]["id"].ToString();
+            GetComponent<Updater_Item>().LoadItem(path, id, mainscene);
+        }
+    }
+}

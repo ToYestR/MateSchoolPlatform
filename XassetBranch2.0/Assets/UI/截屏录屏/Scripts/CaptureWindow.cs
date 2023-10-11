@@ -1,0 +1,120 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CaptureWindow : MonoBehaviour
+{
+    public Button closeBtn;//关闭按钮
+    public Button photographBtn;// 切换截屏按钮
+    public Button screenRecordingBtn;// 切换录制视频按钮
+    public Button recordingBtn;//录制
+    public Button folderBtn;// 打开文件夹
+    public Toggle switchModeTog; 
+    private int recordingIndex = 0;//0:表示拍照，1：表示录制视频,2:表示正在录制视频
+
+    public Sprite m_photosprite;
+    public Sprite m_Recordsprite;
+    
+    private void Start()
+    {
+        closeBtn.onClick.AddListener(Close);
+        photographBtn.onClick.AddListener(TogglePhotograph);
+        screenRecordingBtn.onClick.AddListener(ToggleScreenRecording);
+        recordingBtn.onClick.AddListener(Recording);
+        folderBtn.onClick.AddListener(OpenFolder);
+        switchModeTog.onValueChanged.AddListener(SwitchMode);
+    }
+    private void OnEnable()
+    {
+        recordingIndex = 0;
+        photographBtn.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        screenRecordingBtn.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        recordingBtn.GetComponent<Image>().color = Color.white;
+    }
+    private void OnDisable()
+    {
+        GameUtil.StopRecording();
+    }
+    #region 按钮事件
+    private void Close()
+    {
+        transform.parent.GetComponent<PhotoAlbumWindow>().CloseWindow();
+    }
+    private void TogglePhotograph()
+    {
+        recordingIndex = 0;
+        photographBtn.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        screenRecordingBtn.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        recordingBtn.GetComponent<Image>().color = Color.white;
+        GameUtil.StopRecording();
+    }
+    private void ToggleScreenRecording()
+    {
+        recordingIndex = 1;
+        photographBtn.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        screenRecordingBtn.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        recordingBtn.GetComponent<Image>().color = Color.white;
+        GameUtil.StopRecording();
+    }
+    /// <summary>
+    /// 选择模式
+    /// </summary>
+    /// <param name="isON"></param>
+    public void SwitchMode(bool isON)
+    {
+        if(isON)
+        {
+            recordingIndex = 0;
+            recordingBtn.GetComponent<Image>().sprite = m_photosprite;
+
+            //photographBtn.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+            //screenRecordingBtn.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            //recordingBtn.GetComponent<Image>().color = Color.white;
+            GameUtil.StopRecording();
+        }
+        else
+        {
+            recordingIndex = 1;
+            recordingBtn.GetComponent<Image>().sprite = m_Recordsprite;
+
+            photographBtn.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+            screenRecordingBtn.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+            recordingBtn.GetComponent<Image>().color = Color.white;
+            GameUtil.StopRecording();
+        }
+    }
+    private void Recording()
+    {
+       if(recordingIndex==0)// 拍照
+        {
+            StartCoroutine(Screenshot());
+        }
+       else if(recordingIndex==1)// 录制视频
+        {
+            recordingIndex = 2;
+            recordingBtn.GetComponent<Image>().color = Color.red;
+            GameUtil.StartRecording();
+        }
+       else if(recordingIndex==2)
+        {
+            recordingIndex = 1;
+            recordingBtn.GetComponent<Image>().color = Color.white;
+            GameUtil.StopRecording();
+        }
+    }
+    private void OpenFolder()
+    {
+        gameObject.SetActive(false);
+        transform.parent.GetChild(0).gameObject.SetActive(true);
+    }
+    private IEnumerator Screenshot()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+        GameUtil.ScreenCapture(DateTime.Now.ToString("F").Replace(":","-"));
+        yield return null;
+        transform.GetChild(0).gameObject.SetActive(true);
+    }
+    #endregion
+}

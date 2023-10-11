@@ -1,0 +1,115 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System;
+
+namespace FriendSystem
+{
+    /// <summary>
+    /// 添加学校
+    /// 编辑学校
+    /// </summary>
+    public class AddSchool : MonoBehaviour
+    {
+        [Header("下拉框")]
+        [SerializeField] InputField school;       // 学校
+        [SerializeField] Dropdown department;     // 院系
+        [SerializeField] Dropdown schoolTime;     // 入学时间
+        [SerializeField] Dropdown education;      // 学历
+
+        [Header("按钮")]
+        [SerializeField] Button okBtn;
+        [SerializeField] Button cancelBtn;
+        [SerializeField] Button deleteBtn;
+        [SerializeField] Button closeBtn;
+
+        private EducationItem target;
+
+        private void Awake()
+        {
+            Init();
+        }
+
+        private void Start()
+        {
+            okBtn.onClick.AddListener(OnOKAction);
+            cancelBtn.onClick.AddListener(OnCanvalAction);
+            deleteBtn.onClick.AddListener(OnDelete);
+            closeBtn.onClick.AddListener(OnClose);
+        }
+        private void Init()
+        {
+            schoolTime.options.Clear();
+            int curYear = DateTime.Now.Year;
+            for (int i = 0; i < 50; i++)
+            {
+                DateTime date = new DateTime(curYear - i, 9, 1, 12, 0, 0);
+                schoolTime.options.Add(new Dropdown.OptionData(date.ToShortDateString()));
+            }
+        }
+        private void ToggleWindow(bool state)
+        {
+            transform.GetChild(0).gameObject.SetActive(state);
+            transform.GetComponent<Image>().enabled = state;
+        }
+        private void OnOKAction()
+        {
+            if (target)
+            {
+                EducationInfo info = target.info;
+                if (info == null)
+                {
+                    info = new EducationInfo();
+                }
+                info.school = school.text;
+                info.serie = department.captionText.text;
+                info.time = schoolTime.captionText.text;
+                info.level = education.captionText.text;
+                target.UpdateEducation(info);
+            }
+            ToggleWindow(false);
+        }
+        private void OnCanvalAction()
+        {
+            if (target)
+            {
+                EducationInfo info = target.info;
+                if (info == null)
+                {
+                    info = new EducationInfo();
+                }
+                school.text = info.school;
+                department.captionText.text = info.serie;
+                schoolTime.captionText.text = info.time;
+                this.education.captionText.text = info.level;
+            }
+        }
+        private void OnDelete()
+        {
+            target?.Delete();
+            OnClose();
+        }
+        private void OnClose()
+        {
+            ToggleWindow(false);
+        }
+        /// <summary>
+        /// 打开编辑窗口
+        /// </summary>
+        public void OpenEdit(EducationItem education)
+        {
+            target = education;
+            EducationInfo info = target.info;
+            if (info == null)
+            {
+                info = new EducationInfo();
+            }
+            school.text = info.school;
+            department.captionText.text = info.serie;
+            schoolTime.captionText.text = info.time;
+            this.education.captionText.text = info.level;
+            ToggleWindow(true);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+namespace FriendSystem
+{
+
+    public class ChatBubble : MonoBehaviour
+    {
+        float windowWidth;
+        [SerializeField] TextMeshProUGUI proText;
+        [SerializeField] RectTransform bg;
+        [SerializeField] float gap = 10;        // 气泡两端内边距
+        [SerializeField] float heightOffset = 70;   // 高度 Offset
+        [SerializeField] Image icon;
+        [SerializeField] Text nickName;
+        private IEnumerator GenerateBubble(string msg,bool isMe)
+        {
+            // 等待初始化
+            yield return null;
+            windowWidth = GetComponent<RectTransform>().sizeDelta.x / 3 * 2;
+
+            // 生成气泡
+
+            if(isMe)
+            {
+                proText.GetComponent<RectTransform>().anchoredPosition = new Vector2(-gap, -gap);
+            }
+            else
+            {
+                proText.GetComponent<RectTransform>().anchoredPosition = new Vector2(gap, -gap);
+            }
+
+            proText.text = msg;
+            var textSize = proText.GetPreferredValues();
+            if (textSize.x > windowWidth)
+            {
+                textSize.x = windowWidth;
+            }
+            proText.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, textSize.x);
+            bg.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, textSize.x + gap * 2);
+            textSize = proText.GetPreferredValues();
+            bg.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, textSize.y + gap * 2);
+            GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, textSize.y + gap * 2+ heightOffset);
+        }
+        /// <summary>
+        /// 设置聊天内容
+        /// </summary>
+        /// <param name="msg">聊天消息</param>
+        /// <param name="isMe">是否是自己的消息</param>
+        public void SetContent(string msg,int iconIndex,bool isMe)
+        {
+            icon.sprite = HeadSculptureWindow.getInstance.GetSprite(iconIndex);
+            StartCoroutine(GenerateBubble(msg,isMe));
+        }
+        public void SetContent(string msg, string iconIndexStr,bool isMe)
+        {
+            int iconIndex = 0;
+            int.TryParse(iconIndexStr, out iconIndex);
+            SetContent(msg, iconIndex,isMe);
+        }
+    }
+
+}

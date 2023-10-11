@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using FriendSystem;
+using UnityEngine.SceneManagement;
+namespace XAsset
+{
+    /// <summary>
+    /// 主 UI Canvas
+    /// </summary>
+    public class TestCanvas : MonoBehaviour
+    {
+        [SerializeField] Button openFriendPanel;
+        [SerializeField] Button openPersonalPanel;
+        [SerializeField] Button exitButton;
+
+        private void Start()
+        {
+            openFriendPanel.onClick.AddListener(GoodFriendManager.getInstance.Show);
+            openPersonalPanel.onClick.AddListener(PersonalCenter.getInstance.Show);
+            exitButton.onClick.AddListener(()=> {FriendSystemCanvas.getInstance.Destroy(); SceneManager.LoadScene(1); });//返回个人空间
+        }
+    }
+}
