@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using FriendSystem;
+
+namespace XAsset
+{
+    /// <summary>
+    /// 主 UI Canvas
+    /// </summary>
+    public class MainCanvas : MonoBehaviour
+    {
+        [SerializeField] Button openFriendPanel;
+        [SerializeField] Button openPersonalPanel;
+
+        private void Start()
+        {
+            openFriendPanel.onClick.AddListener(GoodFriendManager.getInstance.Show);
+            openPersonalPanel.onClick.AddListener(PersonalCenter.getInstance.Show);
+        }
+    }
+}

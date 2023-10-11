@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 766567018
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 431ae7b9d0e349d0dd331548ee87cf11
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XAsset/Demo/UI/Components6/Btn_LargeClose_n.png
+- Assets/XAsset/Demo/UI/Components6/middle panel02.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_middlePanel01.png
+- Assets/XAsset/Demo/UI/Components6/Btn_MiddleClose_n.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_LargePanel03.png
+- Assets/XAsset/Demo/UI/Components6/middle panel01.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_middlePanel02.png
+- Assets/XAsset/Demo/UI/Components6/Large panel03.png
+- Assets/XAsset/Demo/UI/Components6/Large panel02.png
+- Assets/XAsset/Demo/UI/Components6/Btn_LargeClose_h.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_LargePanel01.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_middlePanel03.png
+- Assets/XAsset/Demo/UI/Components6/middle panel04.png
+- Assets/XAsset/Demo/UI/Components6/bg_Title_LargePanel02.png
+- Assets/XAsset/Demo/UI/Components6/Large panel04.png
+- Assets/XAsset/Demo/UI/Components6/Btn_MiddleClose_h.png
+- Assets/XAsset/Demo/UI/Components6/Large panel01.png
+- Assets/XAsset/Demo/UI/Components6/Btn_MiddleClose_p.png
+- Assets/XAsset/Demo/UI/Components6/Btn_LargeClose_p.png
+- Assets/XAsset/Demo/UI/Components6/middle panel03.png
+Dependencies: []

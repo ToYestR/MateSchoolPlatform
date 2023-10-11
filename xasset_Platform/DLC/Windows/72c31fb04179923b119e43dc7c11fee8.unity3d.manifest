@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3691522471
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c33e819227c0607d1109b0c6f51f007f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy2_n.png
+- Assets/XAsset/Demo/UI/12Recharge/Radiated light1.png
+- Assets/XAsset/Demo/UI/12Recharge/Icon_Emerald.png
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy_Yellow_h.png
+- Assets/XAsset/Demo/UI/12Recharge/Icon_Coins.png
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy2_p.png
+- Assets/XAsset/Demo/UI/12Recharge/Icon_Sale.png
+- Assets/XAsset/Demo/UI/12Recharge/bg_BuyCoins.png
+- Assets/XAsset/Demo/UI/12Recharge/Icon_dolor.png
+- Assets/XAsset/Demo/UI/12Recharge/Radiated light2.png
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy_Yellow_p.png
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy_Yellow_n.png
+- Assets/XAsset/Demo/UI/12Recharge/Btn_Buy2_h.png
+- Assets/XAsset/Demo/UI/12Recharge/Icon_Gems.png
+- Assets/XAsset/Demo/UI/12Recharge/bg_BuyCoins2.png
+Dependencies: []

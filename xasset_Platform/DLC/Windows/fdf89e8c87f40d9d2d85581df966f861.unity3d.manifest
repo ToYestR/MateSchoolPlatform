@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 711039626
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 37ba998fd41ed8ac8b9d40f1cae39af1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XAsset/Demo/UI/1LoadingPage/bg_Progress.png
+- Assets/XAsset/Demo/UI/1LoadingPage/Progress1.png
+- Assets/XAsset/Demo/UI/1LoadingPage/Progress2.png
+- Assets/XAsset/Demo/UI/1LoadingPage/Title2_bg.png
+Dependencies: []

@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2583878929
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 62e7ed48d5fdd7642bffe7070bd962be
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d417fb4e0cbb8083d584131cd8c8191a
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 7882bd278763c45f49cef7deeae496e5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: XAsset.Runtime
+  ClassName: libx.AssetRef
+- AssemblyName: XAsset.Runtime
+  ClassName: libx.BundleRef
+Assets:
+- Assets/Manifest.asset
+Dependencies: []

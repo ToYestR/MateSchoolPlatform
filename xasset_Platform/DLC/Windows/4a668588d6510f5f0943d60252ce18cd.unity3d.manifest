@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 2552499458
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 012c5ea84463e71add98ac253d4365e8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c21d61fe394c58399df3c6fb5c7c99b3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/XAsset/Demo/UI/10Character/ProgressBar_Speed.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Role3.png
+- Assets/XAsset/Demo/UI/10Character/bg_RECHARGE.png
+- Assets/XAsset/Demo/UI/10Character/Partition line.png
+- Assets/XAsset/Demo/UI/10Character/bg_CHARACTOR.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Buy1_h.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Role1.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Role_p.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Money.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Role4.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Role.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Skill.png
+- Assets/XAsset/Demo/UI/10Character/ProgressBar_Defense.png
+- Assets/XAsset/Demo/UI/10Character/Stage_bg02.png
+- Assets/XAsset/Demo/UI/10Character/ProgressBar_Attack.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Buy1_n.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Role_h.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Skill1.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Skill3.png
+- Assets/XAsset/Demo/UI/10Character/Panel1.png
+- Assets/XAsset/Demo/UI/10Character/bg_RoleBackground.png
+- Assets/XAsset/Demo/UI/10Character/Stage light01.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Role2.png
+- Assets/XAsset/Demo/UI/10Character/Stage light03.png
+- Assets/XAsset/Demo/UI/10Character/Stage_bg03.png
+- Assets/XAsset/Demo/UI/10Character/bg_describtion.png
+- Assets/XAsset/Demo/UI/10Character/Stage light02.png
+- Assets/XAsset/Demo/UI/10Character/bg_ProgressBar_Attack.png
+- Assets/XAsset/Demo/UI/10Character/Icon_Skill2.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Role_n.png
+- Assets/XAsset/Demo/UI/10Character/Btn_Buy1_p.png
+- Assets/XAsset/Demo/UI/10Character/Stage_bg01.png
+Dependencies: []

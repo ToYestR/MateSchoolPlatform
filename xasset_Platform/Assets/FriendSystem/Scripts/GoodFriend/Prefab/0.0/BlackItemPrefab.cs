@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.UI;
+using TMPro;
+
+namespace FriendSystem
+{
+    /// <summary>
+    /// 好友 黑名单 Item 预制件
+    /// </summary>
+    public class BlackItemPrefab : MonoBehaviour
+    {
+        [SerializeField] Image icon;     // 头像
+        [SerializeField] Button removeBtn;
+        [SerializeField] Text nickName;
+        public Friend friendContent { get; set; }
+        private void Start()
+        {
+            removeBtn.onClick.AddListener(OnRemoveClick);
+        }
+
+        private void OnEnable()
+        {
+            StartCoroutine(Refresh());
+        }
+        private IEnumerator Refresh()
+        {
+            while (true)
+            {
+                if (friendContent != null)
+                {
+                    icon.sprite = HeadSculptureWindow.getInstance.GetSprite(friendContent.friendPortrait);
+                    icon.SetNativeSize();
+                    nickName.text = friendContent.friendNickName;
+                }
+                yield return null;
+            }
+        }
+        private void OnRemoveClick()
+        {
+            InfoHandle.BlackOther(friendContent.id, "N");
+        }
+    }
+}
