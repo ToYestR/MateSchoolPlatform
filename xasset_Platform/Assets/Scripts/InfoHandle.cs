@@ -236,28 +236,28 @@ public static class InfoHandle
     /// </summary>
     /// <param name="id"></param>
     /// <param name="isblack"></param>
-    public static void BlackOther(int id, string isblack)
+    public static void BlackOther(int id, string isblack,Action<string> action=null)
     {
         JObject jobect = new JObject();
         jobect.Add("id", id);
         jobect.Add("black", isblack);
         Dictionary<string, string> header = new Dictionary<string, string>();
         header.Add("Authorization", Global.token);
-        WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_BlackFr), jobect.ToString(), header, (str) => Debug.Log(str));
+        WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_BlackFr), jobect.ToString(), header, action);
     }
     /// <summary>
     /// 更新好友 备注
     /// </summary>
     /// <param name="id">好友ID</param>
     /// <param name="msg">备注</param>
-    public static void UpdateRemark(int id, string msg)
+    public static void UpdateRemark(int id, string msg,Action<string> action=null)
     {
         JObject jobect = new JObject();
         jobect.Add("id", id);
         jobect.Add("remark", msg);
         Dictionary<string, string> header = new Dictionary<string, string>();
         header.Add("Authorization", Global.token);
-        WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_UpdateFriendRemark), jobect.ToString(), header, (str) => Debug.Log(str));
+        WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_UpdateFriendRemark), jobect.ToString(), header, action);
     }
     public static void CreateGroup(string json)
     {
