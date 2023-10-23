@@ -20,6 +20,19 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
+		public void LateUpdate()
+		{
+			//yzl¡Ÿ ±ÃÌº”
+			if (Input.GetKeyDown(KeyCode.Mouse0))
+			{
+				cursorInputForLook = true;
+			}
+			else if (Input.GetKeyUp(KeyCode.Mouse0))
+			{
+				cursorInputForLook = false;
+			}
+
+		}
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
