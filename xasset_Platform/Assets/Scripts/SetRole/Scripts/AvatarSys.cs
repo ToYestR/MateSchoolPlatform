@@ -61,7 +61,7 @@ public class AvatarSys : MonoBehaviour
         LoadJson(Global.roleinfo);
         if (sexCount == 0)
         {
-            m_girltoggle.isOn = true;
+            //m_girltoggle.isOn = true;
             //GirlAvatertest();
             boyPanel.SetActive(false);
             girlPanel.SetActive(true);
@@ -71,7 +71,7 @@ public class AvatarSys : MonoBehaviour
         }
         else
         {
-            m_boytoggle.isOn = true;
+            //m_boytoggle.isOn = true;
             boyPanel.SetActive(true);
             girlPanel.SetActive(false);
             //BoyAvatertest();
@@ -305,6 +305,7 @@ public class AvatarSys : MonoBehaviour
 
     public void LoadJson(string json)
     {
+        if (json.Length < 2) return;
         JObject jobject = JsonConvert.DeserializeObject<JObject>(json);
         sexCount = Int32.Parse(jobject["sexJson"].ToString());
         parttest = JsonConvert.DeserializeObject<string>(jobject["partJson"].ToString());
