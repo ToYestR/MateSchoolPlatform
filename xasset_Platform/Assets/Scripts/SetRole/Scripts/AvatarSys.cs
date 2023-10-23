@@ -42,7 +42,6 @@ public class AvatarSys : MonoBehaviour
 
     public GameObject m_Loadingpanel;
     public GameObject editChildSceneWindows;
-    public AvatarSysScene ass;
 
     [Header("临时添加的两个toggle")]
     public Toggle m_boytoggle;
@@ -155,6 +154,7 @@ public class AvatarSys : MonoBehaviour
         foreach (var part in parts)
         {
             string[] names = part.name.Split('-');
+            Debug.Log(part.name);
             if (!data.ContainsKey(names[0]))
             {
                 //生成对应的部位，且只生成一个
