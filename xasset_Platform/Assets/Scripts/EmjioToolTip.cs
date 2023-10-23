@@ -27,7 +27,7 @@ public class EmjioToolTip : MonoBehaviour
     {
         if (Camera.main)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Camera.main.transform.position - transform.position), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transform.position-Camera.main.transform.position), 10 * Time.deltaTime);
         }
     }
 }

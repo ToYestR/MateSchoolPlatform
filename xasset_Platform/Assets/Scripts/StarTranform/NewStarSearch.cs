@@ -21,7 +21,8 @@ public class NewStarSearch : Singleton<NewStarSearch>
 
     private void Start()
     {
-        searchButton.onClick.AddListener(OnButtonClickTest);
+        //searchButton.onClick.AddListener(OnButtonClickTest);
+        searchInput.onValueChanged.AddListener(OnButtonClickTest);
     }
 
     public List<Transform> GetNamedChildren(Transform parent)
@@ -127,7 +128,7 @@ public class NewStarSearch : Singleton<NewStarSearch>
         }
     }
 
-    public void OnButtonClickTest()
+    public void OnButtonClickTest(string value)
     {
         if (!isInitialized)
         {
