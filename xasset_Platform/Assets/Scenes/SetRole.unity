@@ -4456,12 +4456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2accd62d63d8d6545911beaf3db29600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sexCount: 0
+  sexCount: 1
   girlPanel: {fileID: 1613215413}
   boyPanel: {fileID: 958752074}
   parttest: 
   numtest: 
-  sexJson: 0
+  sexJson: 1
   partJson: 
   numJson: 
   girlJson: 

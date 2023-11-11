@@ -6,8 +6,10 @@ using UnityEngine.UI;
 using Im;
 using System.Threading;
 using Google.Protobuf.WellKnownTypes;
-
-public class Login : MonoBehaviour
+/// <summary>
+/// 用于个人空间登陆的脚本
+/// </summary>
+public class PersonalSpaceLogin : MonoBehaviour
 {
     public Button loginBtn, connectBtn, press, JoinRoom;
     public InputField serverIP, port, content,nickName, roomNum;
@@ -16,14 +18,38 @@ public class Login : MonoBehaviour
 
     private void Start()
     {
-
-        loginBtn.onClick.AddListener(OnLoginBtnClick);
-        JoinRoom.onClick.AddListener(OnJoinBtnClick);
-        connectBtn.onClick.AddListener(OnConnectBtnClick);
-        press.onClick.AddListener(Pressure);
+        //loginBtn.onClick.AddListener(OnLoginBtnClick);
+        //JoinRoom.onClick.AddListener(OnJoinBtnClick);
+        //connectBtn.onClick.AddListener(OnConnectBtnClick);
+        //press.onClick.AddListener(Pressure);
+        //Debug.Log("执行Start");
+        if(ClientManager.Instance!=null)
+        {
+            ClientManager.Instance = null;
+        }
         ClientManager.Instance.InitSocket("47.101.199.191", "10001");
-        //登陆+房间进入
+        if (Global.gotospacename != "")
+        {
+            ClientManager.Instance.roomname = Global.gotospacename;
+        }
+        else
+        {
+            ClientManager.Instance.roomname = Global.uid.ToString();
+        }
         LoginFuction();
+
+        //if (ClientManager.Instance.socket==null)
+        //{
+        //    ClientManager.Instance.InitSocket("47.101.199.191", "10001");
+        //    LoginFuction();
+        //}
+        //else
+        //{
+        //    //直接加入房间方法
+        //    //JoinRoomFuction();
+        //    LoginFuction();
+        //}
+        //登陆+房间进入
     }
 
     public void Pressure()
@@ -55,6 +81,7 @@ public class Login : MonoBehaviour
     /// </summary>
     public void LoginFuction()
     {
+        
         ClientManager.Instance.Send(new LoginRequest()
         {
             Uid = Global.uid.ToString(),
@@ -70,6 +97,15 @@ public class Login : MonoBehaviour
         Debug.Log("发送登录请求，uid为" + Global.uid);
 
     }
+
+    public void JoinRoomFuction()
+    {
+        ClientManager.Instance.Send(new JoinRoomRequest()
+        { RoomNo = ClientManager.Instance.roomname });
+        Debug.Log("发送加房间请求，房间名为" + ClientManager.Instance.roomname);
+
+
+    }
     public void OnLoginBtnClick()
     {
 
@@ -82,5 +118,11 @@ public class Login : MonoBehaviour
 
         ClientManager.Instance.Send(new JoinRoomRequest() { RoomNo = roomNum.text });
         Debug.Log("发送加入房间请求，roomNO为 " + roomNum.text);
+    }
+    public void OnDestroy()
+    {
+
+        //Debug.Log("执行场景退出,场景名："+ ClientManager.Instance.roomname);
+        //ClientManager.Instance.Send(new ExitRoomRequest() {RoomNo=ClientManager.Instance.roomname});
     }
 }

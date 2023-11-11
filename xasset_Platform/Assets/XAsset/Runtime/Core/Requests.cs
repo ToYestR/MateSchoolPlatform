@@ -504,7 +504,8 @@ namespace libx
             {
 
                 _request = SceneManager.LoadSceneAsync(sceneName, loadSceneMode);
-                SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+                //yzl¡Ÿ ±◊¢ Õ
+                //SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
                 //_request.allowSceneActivation = false;
 
                 loadState = LoadState.LoadAsset;

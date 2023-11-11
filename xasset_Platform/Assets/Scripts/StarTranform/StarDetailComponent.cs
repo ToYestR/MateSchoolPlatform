@@ -26,13 +26,14 @@ public class StarDetailComponent : MonoBehaviour
     public Image UIIcon;
     public Updater_Loader loader;
     public GameObject starDetailCanvas;
-
+    [Header("主相机")]
+    public GameObject mainCamera;
     public bool isActived = false;
     private void Start()
     {
         TitleText();
     }
-
+    
     public void TitleText()
     {
         Text uiTextComponent = transform.GetChild(0).GetChild(0).GetComponent<Text>();
@@ -46,12 +47,20 @@ public class StarDetailComponent : MonoBehaviour
             UITest();
         }
     }
+    private void Update()
+    {
+        Vector3 directionToCamera = mainCamera.transform.position - transform.position;
+        Quaternion faceCameraRotation = Quaternion.LookRotation(directionToCamera);
+        transform.rotation = faceCameraRotation;
+    }
     public void UITest()
     {
         UITitle.GetComponent<Text>().text = mainScene;
         UIDetail.GetComponent<Text>().text = uploadDesc;
         StartCoroutine(DownloadAndSetImage(logotypeImage, UIIcon));
         loader.SetItem(ossParentPath, id, mainScene);
+        Global.currentseneid = id;
+        Debug.Log(ossParentPath+"/n" + id + mainScene);
         starDetailCanvas.SetActive(true);
     }
     private IEnumerator DownloadAndSetImage(string imageUrl, Image targetImage)

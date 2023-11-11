@@ -36,6 +36,36 @@ public class AvatarButton : MonoBehaviour
             // }
         }
     }
+    public void SetBoy(bool isOn)
+    {
+        if (AvatarSys._instance.sexCount == 1) return;
+        if (isOn)
+        {
+            if (gameObject.name == "boy" || gameObject.name == "girl")
+            {
+                AvatarSys._instance.sexCount = 1;
+                AvatarSys._instance.SexChange();
+                return;
+            }
+            string[] names = gameObject.name.Split('-');
+            AvatarSys._instance.OnChangePeople(names[0], names[1]);
+        }
+    }
+    public void SetGirl(bool isOn)
+    {
+        if (AvatarSys._instance.sexCount == 0) return;
+        if (isOn)
+        {
+            if (gameObject.name == "boy" || gameObject.name == "girl")
+            {
+                AvatarSys._instance.sexCount = 0;
+                AvatarSys._instance.SexChange();
+                return;
+            }
+            string[] names = gameObject.name.Split('-');
+            AvatarSys._instance.OnChangePeople(names[0], names[1]);
+        }
+    }
 
     public void PlayAnimation(string animName)
     {
@@ -49,6 +79,7 @@ public class AvatarButton : MonoBehaviour
 
     public void LoadScenes()
     {
+        //保存完成加载新场景-YZL
         AvatarSys._instance.SaveJson();
         //SceneManager.LoadScene("Scenes/02");
     }

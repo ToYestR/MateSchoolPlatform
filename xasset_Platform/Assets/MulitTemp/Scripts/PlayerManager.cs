@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        player = Resources.Load<GameObject>("Player");
+        player = Resources.Load<GameObject>("Player男");
 
     }
 
@@ -41,6 +41,7 @@ public class PlayerManager : MonoBehaviour
 
         if (pack != null && pack.Msg.TypeUrl == "type.googleapis.com/Im.JoinRoomResponse")
         {
+            Debug.LogWarning("处理登陆信息");
             HandleJoinRommResponse(pack.Msg.Unpack<JoinRoomResponse>());
             
         }
@@ -82,6 +83,7 @@ public class PlayerManager : MonoBehaviour
 
             if (p.Uid.Equals(ClientManager.Instance.uid))
             {
+                Debug.Log(p.Uid);
                 //创建本地角色
                 var controller= g.GetComponent<ThirdPersonController>();
                 CharacterRistic characterRistic = g.GetComponent<CharacterRistic>();
@@ -89,8 +91,10 @@ public class PlayerManager : MonoBehaviour
                 characterRistic.username = p.NickName;
                 g.AddComponent<UpStatusRequest>();
                 g.AddComponent<UpdateStatus>();
+                //临时测试清除父物体
+                //g.GetComponentInChildren<Camera>().transform.SetParent(null);
 
-                 
+
             }
 
 
@@ -104,9 +108,9 @@ public class PlayerManager : MonoBehaviour
                 g.AddComponent<RemoteCharacter>();
 
                 //Object.Destroy(g.GetComponentInChildren<Camera>().gameObject);
-
+                //g.transform.GetChild(1).gameObject.SetActive(true);
                 Object.Destroy(controller.GetComponentInChildren<Camera>().gameObject);
-                Object.Destroy(controller.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().gameObject);
+               Object.Destroy(controller.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().gameObject);
 
                 Object.Destroy(g.GetComponent<PlayerInput>());
 
@@ -151,12 +155,18 @@ public class PlayerManager : MonoBehaviour
     public void HandleExitRoom(ExitRoom pack)
     {
         var playerPack = pack.PlayerPack;
-        players.TryGetValue(playerPack.Uid, out GameObject g);
-        DestroyImmediate(g);
+        foreach(var item in players)
+        {
+            DestroyImmediate(item.Value);
+            players.Remove(item.Key);
+        }
+        //players.TryGetValue(playerPack.Uid, out GameObject g);
+        //DestroyImmediate(g);
     }
 
     private void OnDestroy()
     {
+        ClientManager.Instance.Send(new Logout() { PlayerPack = new PlayerPack() { Uid = ClientManager.Instance.uid } });
 
     }
 }

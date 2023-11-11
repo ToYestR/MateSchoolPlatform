@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Im;
+
 namespace XAsset
 {
     public class PersonalCenterUIManager : MonoBehaviour
@@ -26,16 +28,36 @@ namespace XAsset
         public Button loginout_btn;
         public Button applicationQuit_btn;
 
+        [Header("换装界面的进入按钮")]
+        public Button m_Faceliftbtn;
+
+        [Header("界面的收起与展开管理")]
+        public Button collapse_btn;
+        public Button expand_btn;
+        public GameObject rightpanel;
+
+
         private GameObject m_mainCamera;
         void Start()
         {
 
             m_SceneSelectbtn.onValueChanged.AddListener(OnSelectToggleChanged);
 
-            loginout_btn.onClick.AddListener(() => { SceneManager.LoadScene(0); });
+            loginout_btn.onClick.AddListener(() => {
+                //ClientManager.Instance.Send(new Logout() { });
+                PlayerPrefs.SetString("Username", "");
+                PlayerPrefs.SetString("Password", "");
+
+                SceneManager.LoadScene(0); });
             applicationQuit_btn.onClick.AddListener(() => { Application.Quit(); });
             m_setting_tog.onValueChanged.AddListener(SetSettingWindw);
 
+            //进入换装界面
+            m_Faceliftbtn.onClick.AddListener(()=>SceneManager.LoadScene(4));
+
+            //展开收起相关逻辑
+            //collapse_btn.onClick.AddListener(() => { rightpanel.SetActive(false)});
+            //expand_btn.onClick.AddListener(() => { });
         }
 
         // Update is called once per frame

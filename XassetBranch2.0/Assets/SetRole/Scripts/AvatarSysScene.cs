@@ -51,6 +51,7 @@ public class AvatarSysScene : MonoBehaviour
         if (Global.roleinfo != "")
         {
             jsontestest = Global.roleinfo;
+            Debug.Log(jsontestest);
         }
         //Debug.Log("\""+jsontestest+"\"");
         LoadJson(jsontestest);

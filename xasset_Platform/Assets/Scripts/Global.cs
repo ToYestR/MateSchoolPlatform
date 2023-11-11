@@ -12,6 +12,10 @@ public static class Global
     public static string chatNo = "a1f773c8980b40cb96e75c14b50c8864";   // 微聊号
     public static int portrait;         // 头像 序号
     public static string roleinfo = "";
+    /// <summary>
+    /// 玩家的角色类型
+    /// </summary>
+    public static string AgentType = "";
     /// <summary>   
     /// 当前学校名称
     /// </summary>

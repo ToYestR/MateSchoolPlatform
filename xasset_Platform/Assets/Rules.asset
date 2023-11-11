@@ -25,6 +25,8 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 90947e6f5df7819409f2d83abfeaf45b, type: 3}
   - {fileID: 102900000, guid: d7984db359fad3543b765d6d6b6c0257, type: 3}
   - {fileID: 102900000, guid: 06d7623b6fad859498c7d1de5485ac55, type: 3}
+  - {fileID: 102900000, guid: 523760f0a578eff47a511d9e62d65ecd, type: 3}
+  - {fileID: 102900000, guid: 91967666e954b4e4ba72aaeb4da20359, type: 3}
   rules:
   - searchPath: Assets/XAsset/Demo/UI
     searchPattern: '*'

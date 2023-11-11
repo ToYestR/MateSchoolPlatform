@@ -38,6 +38,11 @@ namespace XAsset
         {
             
         }
+        public void Start()
+        {
+            //尝试二次登陆
+            SecondLogin();
+        }
         /// <summary>
         /// 登陆时获取验证码
         /// </summary>
@@ -113,6 +118,13 @@ namespace XAsset
             JObject jobject = JsonConvert.DeserializeObject<JObject>(json);
             if (jobject["code"].ToString() == "200")
             {
+                //判断是否二次登陆
+                if (m_UsernameIF.text != "")
+                {
+                    //如果登陆成功保存当前的账号密码数据
+                    PlayerPrefs.SetString("Username", m_UsernameIF.text);
+                    PlayerPrefs.SetString("Password", m_PasswordIF.text);
+                }
                 Global.token = jobject["token"].ToString();
                 JObject jobject1 = new JObject();
                 Dictionary<string, string> header = new Dictionary<string, string>();
@@ -137,7 +149,7 @@ namespace XAsset
             Global.roleinfo = jobject["data"]["roleInfo"].ToString();
             // Start 初始化个人中心
             int.TryParse(jobject["data"]["avatar"].ToString(), out PersonalInfo.icon);
-            Global.portrait=PersonalInfo.icon;
+            Global.portrait = PersonalInfo.icon;
             PersonalInfo.nickName = Global.nickname;
             PersonalInfo.accountNumber = Global.mobile;
             int.TryParse(jobject["data"]["age"].ToString(), out PersonalInfo.age);
@@ -183,8 +195,8 @@ namespace XAsset
                     return;
                 }
             }
-                SceneManager.LoadScene(1, LoadSceneMode.Single);
-                Global.isCanEdit = false;
+            SceneManager.LoadScene("PersonalCenter", LoadSceneMode.Single);
+            Global.isCanEdit = false;
             //if (ScenName != "")
             //{
             //    Global.currentschoolname = "上海城建职业学院元宇宙校园";
@@ -212,11 +224,18 @@ namespace XAsset
             JObject jobject = JsonConvert.DeserializeObject<JObject>(result);
 
             StartCoroutine(ShowInfo(jobject["msg"].ToString()));
-            if(jobject["code"].ToString()=="200")
-            {
-                FindObjectOfType<LoginMainWindow>().ShowStepIndex(1);
-                GameObject.Find("UserLogin_tog").GetComponent<Toggle>().isOn = true;
-            }
+            //保存账号密码
+            PlayerPrefs.DeleteKey("");
+            PlayerPrefs.DeleteKey("");
+
+            //打开账户设置面板
+
+
+            //if(jobject["code"].ToString()=="200")
+            //{
+            //    FindObjectOfType<LoginMainWindow>().ShowStepIndex(1);
+            //    GameObject.Find("UserLogin_tog").GetComponent<Toggle>().isOn = true;
+            //}
          }
 
         IEnumerator ShowInfo(string text)
@@ -259,6 +278,27 @@ namespace XAsset
             }
             text.text = "获取验证码";
             btn.enabled = true;
+        }
+        /// <summary>
+        /// 二次登陆
+        /// </summary>
+        public void SecondLogin()
+        {
+            if (PlayerPrefs.GetString("Username")!="")
+            {
+                JObject jobject = new JObject();
+                jobject.Add("userName", PlayerPrefs.GetString("Username"));
+                jobject.Add("password", PlayerPrefs.GetString("Password"));
+                WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_Login), jobject.ToString(), new Dictionary<string, string>(), LoginHandle);
+                Debug.Log(jobject.ToString());
+            }
+        }
+        /// <summary>
+        /// 初始化时设置昵称
+        /// </summary>
+        public void SetUserInfo()
+        {
+
         }
     }
 }

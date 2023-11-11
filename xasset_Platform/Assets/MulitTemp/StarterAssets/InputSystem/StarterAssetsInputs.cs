@@ -18,16 +18,17 @@ namespace StarterAssets
 
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
-		public bool cursorInputForLook = true;
+		public bool cursorInputForLook = false;
 
-		public void LateUpdate()
+		public void Update()
 		{
+
 			//yzl临时添加
-			if (Input.GetKeyDown(KeyCode.Mouse0))
+			if (Input.GetKey(KeyCode.Mouse0))
 			{
 				cursorInputForLook = true;
 			}
-			else if (Input.GetKeyUp(KeyCode.Mouse0))
+			else if (!Input.GetKey(KeyCode.Mouse0))
 			{
 				cursorInputForLook = false;
 			}
@@ -43,7 +44,17 @@ namespace StarterAssets
 		{
 			if(cursorInputForLook)
 			{
+				//对输入值做处理
+				if(Mathf.Abs(value.Get<Vector2>().x)>2)
+                {
+					cursorInputForLook = false;
+					//return;
+				}
+				//Vector2 v2 = new Vector2(Mathf.Clamp(value.Get<Vector2>().x, -0.5f, 0.5f), value.Get<Vector2>().y);
+				//Debug.Log(v2);
+				//LookInput(v2)
 				LookInput(value.Get<Vector2>());
+				//cursorInputForLook = false;
 			}
 		}
 

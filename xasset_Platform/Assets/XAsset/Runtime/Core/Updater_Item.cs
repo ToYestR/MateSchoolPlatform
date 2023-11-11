@@ -686,7 +686,8 @@ namespace libx
         private IEnumerator LoadGameScene()
         {
             Debug.Log(gameScene);
-            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+            //SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+            Debug.LogWarning("加载第二场景");
             OnMessage("正在初始化");
             var init = Assets.Initialize();
             yield return init;

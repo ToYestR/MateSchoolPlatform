@@ -183,7 +183,7 @@ namespace libx
             _savePath = string.Format("{0}/{1}/", Application.streamingAssetsPath, schoolname);
             Assets.updatePath = _savePath;
             baseURL = url;
-            gameScene = scenename;
+            gameScene ="DemoScene.unity" ;
         }
         /// <summary>
         /// 按照信息直接开始下载
@@ -712,7 +712,8 @@ namespace libx
         private IEnumerator LoadGameScene()
         {
             Debug.Log(gameScene);
-            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+            //SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
             OnMessage("正在初始化");
             var init = Assets.Initialize();
             yield return init;
@@ -725,6 +726,7 @@ namespace libx
                 var scene = Assets.LoadSceneAsync(gameScene, false);
                 while (!scene.isDone)
                 {
+
                     OnProgress(scene.progress);
                     yield return null;
                 }

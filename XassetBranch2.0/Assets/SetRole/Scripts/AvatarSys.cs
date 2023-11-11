@@ -5,7 +5,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
-
+using libx;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class AvatarSys : MonoBehaviour
 {
     public static AvatarSys _instance;
@@ -38,21 +40,49 @@ public class AvatarSys : MonoBehaviour
     public string girlJson;
     public string boyJson;
 
-    public AvatarSysScene ass;
+    public GameObject m_Loadingpanel;
+    public GameObject editChildSceneWindows;
+
+    [Header("临时添加的两个toggle")]
+    public Toggle m_boytoggle;
+    public Toggle m_girltoggle;
     private void Awake()
     {
         _instance = this;
-        DontDestroyOnLoad(this.gameObject);//跳转场景时不删除游戏物体
+        //DontDestroyOnLoad(this.gameObject);//跳转场景时不删除游戏物体
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        GirlAvater();
+        Debug.Log("执行初始化");
+        //GirlAvater();
         BoyAvater();
+        LoadJson(Global.roleinfo);
+        if (sexCount == 0)
+        {
+            //m_girltoggle.isOn = true;
+            //GirlAvatertest();
+            boyPanel.SetActive(false);
+            girlPanel.SetActive(true);
+            girlTarget.SetActive(true);
+            boyTarget.SetActive(false);
+            InitAvatarGirltest();
+        }
+        else
+        {
+            //m_boytoggle.isOn = true;
+            boyPanel.SetActive(true);
+            //girlPanel.SetActive(false);
+            //BoyAvatertest();
+            //YZL临时注释掉女性部分
+            //girlTarget.SetActive(false);
+            boyTarget.SetActive(true);
+            InitAvatarBoytest();
+        }
+
         boyTarget.AddComponent<SpinWithMouse>();
-        girlTarget.AddComponent<SpinWithMouse>();
-        boyTarget.SetActive(false);
+        //girlTarget.AddComponent<SpinWithMouse>();
     }
 
     private void Update()
@@ -125,6 +155,7 @@ public class AvatarSys : MonoBehaviour
         foreach (var part in parts)
         {
             string[] names = part.name.Split('-');
+            Debug.Log(part.name);
             if (!data.ContainsKey(names[0]))
             {
                 //生成对应的部位，且只生成一个
@@ -232,9 +263,8 @@ public class AvatarSys : MonoBehaviour
     /// </summary>
     public void SexChange()
     {
-        if (sexCount == 0)
+        if (sexCount == 1)
         {
-            sexCount = 1;
             boyTarget.SetActive(true);
             girlTarget.SetActive(false);
             boyPanel.SetActive(true);
@@ -243,7 +273,6 @@ public class AvatarSys : MonoBehaviour
         }
         else
         {
-            sexCount = 0;
             boyTarget.SetActive(false);
             girlTarget.SetActive(true);
             boyPanel.SetActive(false);
@@ -277,6 +306,7 @@ public class AvatarSys : MonoBehaviour
 
     public void LoadJson(string json)
     {
+        if (json.Length < 2) return;
         JObject jobject = JsonConvert.DeserializeObject<JObject>(json);
         sexCount = Int32.Parse(jobject["sexJson"].ToString());
         parttest = JsonConvert.DeserializeObject<string>(jobject["partJson"].ToString());
@@ -293,8 +323,45 @@ public class AvatarSys : MonoBehaviour
         jobTest.Add("numJson", numJson);
         jobTest.Add("girlJson", girlJson);
         jobTest.Add("boyJson", boyJson);
-        Debug.Log(jobTest.ToString());
-        //ass.jsontestest = jobTest.ToString();
+
         LoadJson(jobTest.ToString());
+        Debug.Log(jobTest.ToString());
+        Global.roleinfo = jobTest.ToString();
+        //获得角色信息
+        //WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_EditStudengtInfo), userjobj.ToString(), header, Debug.Log);
+        //保存角色信息
+        JObject userjobj = new JObject();
+        userjobj.Add("id", Global.uid);
+        userjobj.Add("userName", Global.UserName);
+        userjobj.Add("nickName", Global.nickname);
+        userjobj.Add("roleInfo", Global.roleinfo);
+        Debug.Log(userjobj.ToString());
+        Dictionary<string, string> header = new Dictionary<string, string>();
+        header.Add("Authorization", Global.token);
+        WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_EditStudengtInfo), userjobj.ToString(), header, Debug.Log);
+        //WebRequestController.Instance.Post(ApiCore.GetUrl(ApiCore.Url_ListUnAuditMainScene), userjobj.ToString(), header, Debug.Log);
+        //打开场景选择界面
+        SceneManager.LoadScene(2);
+        //if (Global.currentseneid == "")
+        //{
+        //    editChildSceneWindows.SetActive(true);
+        //    Global.currentseneid = "131";
+        //}
+        //else
+        //{
+        //    EnterScene();
+        //}
     }
+    /// <summary>
+    /// 返回主界面
+    /// </summary>
+    public void ReLogin()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void EnterScene()
+    {
+    }
+
+
 }

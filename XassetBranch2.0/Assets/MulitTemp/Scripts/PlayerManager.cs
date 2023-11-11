@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        player = Resources.Load<GameObject>("Player");
+        player = Resources.Load<GameObject>("Player男");
 
     }
 
@@ -82,18 +82,17 @@ public class PlayerManager : MonoBehaviour
 
             if (p.Uid.Equals(ClientManager.Instance.uid))
             {
-                g.name = "MySelf";
                 //创建本地角色
                 var controller= g.GetComponent<ThirdPersonController>();
                 CharacterRistic characterRistic = g.GetComponent<CharacterRistic>();
                 characterRistic.isLocal = true;
-                characterRistic.uid = p.Uid;
                 characterRistic.username = p.NickName;
-                characterRistic.tittle.text = p.NickName;
-                characterRistic.chatNo = p.Chatno;
                 g.AddComponent<UpStatusRequest>();
                 g.AddComponent<UpdateStatus>();
-                
+                //临时测试清除父物体
+                //g.GetComponentInChildren<Camera>().transform.SetParent(null);
+
+
             }
 
 
@@ -102,17 +101,14 @@ public class PlayerManager : MonoBehaviour
                 //创建其他客户端的角色
                 CharacterRistic characterRistic = g.GetComponent<CharacterRistic>();
                 characterRistic.isLocal = false;
-                characterRistic.uid = p.Uid;
                 characterRistic.username = p.NickName;
-                characterRistic.tittle.text = p.NickName;
-                characterRistic.chatNo = p.Chatno;
                 var controller = g.GetComponent<ThirdPersonController>();
                 g.AddComponent<RemoteCharacter>();
 
                 //Object.Destroy(g.GetComponentInChildren<Camera>().gameObject);
-
+                //g.transform.GetChild(1).gameObject.SetActive(true);
                 Object.Destroy(controller.GetComponentInChildren<Camera>().gameObject);
-                Object.Destroy(controller.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().gameObject);
+               Object.Destroy(controller.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().gameObject);
 
                 Object.Destroy(g.GetComponent<PlayerInput>());
 

@@ -12,11 +12,17 @@ using Google.Protobuf.WellKnownTypes;
 
 public class ClientManager
 {
-    Socket socket;
+    public Socket socket;
     Message message;
     PlayerManager playerManager;
     public string uid;
     public string nickName;
+
+    /// <summary>
+    /// 要加入的房间名
+    /// </summary>
+    public string roomname = "";
+
     static ClientManager _instance;
     public static ClientManager Instance
     {
@@ -27,6 +33,10 @@ public class ClientManager
                 _instance = new ClientManager();
             }
             return _instance;
+        }
+        set
+        {
+            _instance = null;
         }
     }
 
@@ -107,17 +117,13 @@ public class ClientManager
         if (pack.Msg.TypeUrl == "type.googleapis.com/Im.LoginResponse")
         {
             //msg = pack.Msg;
-            Debug.Log(pack.Msg.Unpack<LoginResponse>().Result);
+            Debug.Log(pack.Msg.Unpack<LoginResponse>().Result+ pack.Msg.Unpack<LoginResponse>().Description);
             //如果存在个人空间
-            if(Global.gotospacename!="")
+            if(roomname != "")
             {
-                ClientManager.Instance.Send(new JoinRoomRequest() { RoomNo = Global.gotospacename });
+                ClientManager.Instance.Send(new JoinRoomRequest() { RoomNo = roomname });
             }
-            else
-            {
-                ClientManager.Instance.Send(new JoinRoomRequest() { RoomNo = Global.currentseneid });
-            }
-            Debug.Log("发送加入房间请求，roomNO为 " + Global.currentseneid);
+            Debug.Log("发送加入房间请求，roomNO为 " + roomname);
 
         }
 
@@ -143,7 +149,7 @@ public class ClientManager
 
         else if (pack.Msg.TypeUrl == "type.googleapis.com/Im.ExitRoom")
         {
-            Debug.Log("执行了");
+            Debug.Log("执行了退出房间");
             playerManager.pack = pack;
 
         }

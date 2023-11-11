@@ -23,8 +23,16 @@ public class WebRequestController : MonoBehaviour
     }
     private void Awake()
     {
-        Instance = this;
-        //DontDestroyOnLoad(this);
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void Post(string url, WWWForm form, Dictionary<string, string> header, Action<string> action = null)
     {
@@ -68,41 +76,44 @@ public class WebRequestController : MonoBehaviour
 
     private IEnumerator PostCoroutine(string url, WWWForm form, Dictionary<string, string> header, Action<string> action = null)
     {
-        var webrequest = UnityWebRequest.Post(url, form);
-        foreach (var item in header)
-        {
-            webrequest.SetRequestHeader(item.Key, item.Value);
-        }
-        yield return webrequest.SendWebRequest();
-        var data = webrequest.downloadHandler.text;
-        webrequest.Dispose();
-        action?.Invoke(data);
-    }
-
-    private IEnumerator PostCoroutine(string url, string form, Dictionary<string, string> header, Action<string> action = null)
-    {
-        var webrequest = UnityWebRequest.Post(url, form);
-
-        if (header != null)
+        using (UnityWebRequest webrequest = UnityWebRequest.Post(url, form))
         {
             foreach (var item in header)
             {
                 webrequest.SetRequestHeader(item.Key, item.Value);
             }
-        }
-        webrequest.SetRequestHeader("Content-Type", "application/json;charset=utf-8");
-
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(form);
-        using (webrequest.uploadHandler = new UploadHandlerRaw(bodyRaw))
-        {
             yield return webrequest.SendWebRequest();
-            webrequest.uploadHandler.Dispose();
-
             var data = webrequest.downloadHandler.text;
-            action?.Invoke(data);
             webrequest.Dispose();
-            //webrequest.disposeDownloadHandlerOnDispose = true;
-            //webrequest.disposeUploadHandlerOnDispose = true;
+            action?.Invoke(data);
+        }
+    }
+
+    private IEnumerator PostCoroutine(string url, string form, Dictionary<string, string> header, Action<string> action = null)
+    {
+        using (UnityWebRequest webrequest = UnityWebRequest.Post(url, form))
+        {
+            if (header != null)
+            {
+                foreach (var item in header)
+                {
+                    webrequest.SetRequestHeader(item.Key, item.Value);
+                }
+            }
+            webrequest.SetRequestHeader("Content-Type", "application/json;charset=utf-8");
+
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(form);
+            using (webrequest.uploadHandler = new UploadHandlerRaw(bodyRaw))
+            {
+                yield return webrequest.SendWebRequest();
+                webrequest.uploadHandler.Dispose();
+
+                var data = webrequest.downloadHandler.text;
+                action?.Invoke(data);
+                webrequest.Dispose();
+                //webrequest.disposeDownloadHandlerOnDispose = true;
+                //webrequest.disposeUploadHandlerOnDispose = true;
+            }
         }
 
     }
@@ -151,5 +162,13 @@ public class WebRequestController : MonoBehaviour
             pwd = pwd + s[i].ToString("x2");
         }
         return pwd;
+    }
+    public void OnDestroy()
+    {
+        
+        if (gameObject == null)
+        {
+            Instance = null;
+        }
     }
 }

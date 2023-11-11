@@ -43,7 +43,7 @@ namespace ChinarConsole
         Rect windowRect = new Rect(Edge, Edge, Screen.width - (Edge * 2), Screen.height - (Edge * 2));
         public void Awake()
         {
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         void OnEnable()
         {

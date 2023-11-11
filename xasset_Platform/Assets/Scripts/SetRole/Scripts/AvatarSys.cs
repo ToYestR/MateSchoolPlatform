@@ -56,7 +56,7 @@ public class AvatarSys : MonoBehaviour
     void Start()
     {
         Debug.Log("执行初始化");
-        GirlAvater();
+        //GirlAvater();
         BoyAvater();
         LoadJson(Global.roleinfo);
         if (sexCount == 0)
@@ -73,15 +73,16 @@ public class AvatarSys : MonoBehaviour
         {
             //m_boytoggle.isOn = true;
             boyPanel.SetActive(true);
-            girlPanel.SetActive(false);
+            //girlPanel.SetActive(false);
             //BoyAvatertest();
-            girlTarget.SetActive(false);
+            //YZL临时注释掉女性部分
+            //girlTarget.SetActive(false);
             boyTarget.SetActive(true);
             InitAvatarBoytest();
         }
 
         boyTarget.AddComponent<SpinWithMouse>();
-        girlTarget.AddComponent<SpinWithMouse>();
+        //girlTarget.AddComponent<SpinWithMouse>();
     }
 
     private void Update()
@@ -357,6 +358,10 @@ public class AvatarSys : MonoBehaviour
     public void ReLogin()
     {
         SceneManager.LoadScene(0);
+        //清掉账号
+        PlayerPrefs.SetString("","");
+        //清掉密码
+        PlayerPrefs.SetString("","");
     }
     public void EnterScene()
     {

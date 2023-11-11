@@ -34,7 +34,7 @@ public class SZ_SceneLoadingControl : MonoBehaviour
             Pecentage_Text.text = "加载进度：" +(int) (slider.value * 100) + "%";
             yield return new WaitForSeconds(0.1f);
         }
-        SceneManager.UnloadSceneAsync("02_Loading");
+        //SceneManager.UnloadSceneAsync("02_Loading");
         //while(true)
         //{
         //    Scene scene =SceneManager.GetActiveScene();

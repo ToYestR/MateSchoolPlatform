@@ -79,6 +79,7 @@ public class AvatarButton : MonoBehaviour
 
     public void LoadScenes()
     {
+        //保存完成加载新场景-YZL
         AvatarSys._instance.SaveJson();
         //SceneManager.LoadScene("Scenes/02");
     }

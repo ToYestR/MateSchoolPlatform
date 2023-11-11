@@ -134,7 +134,7 @@ namespace XAsset
             Global.nickname = jobject["data"]["nickName"].ToString();
             Global.chatNo = jobject["data"]["chatNo"].ToString();
             Global.uid = (int)jobject["data"]["id"];
-
+            Global.roleinfo = jobject["data"]["roleInfo"].ToString();
             // Start 初始化个人中心
             int.TryParse(jobject["data"]["avatar"].ToString(), out PersonalInfo.icon);
             Global.portrait=PersonalInfo.icon;

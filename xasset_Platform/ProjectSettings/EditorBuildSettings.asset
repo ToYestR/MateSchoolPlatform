@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PersonalSpace/PersonalCenter.unity
     guid: 06d7623b6fad859498c7d1de5485ac55
+  - enabled: 1
+    path: Assets/Resources/02_Loading.unity
+    guid: 523760f0a578eff47a511d9e62d65ecd
+  - enabled: 1
+    path: Assets/Scenes/SelectRole.unity
+    guid: 91967666e954b4e4ba72aaeb4da20359
   m_configObjects: {}
